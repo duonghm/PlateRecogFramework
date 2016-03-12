@@ -1,5 +1,29 @@
-﻿Build started 3/12/2016 8:23:49 PM.
+﻿Build started 3/13/2016 1:45:08 AM.
+     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\PlateDetector.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\OpenCV\build\include /IC:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\include /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt src\IPlateDetect.cpp src\IPlateDetectStrategy.cpp
+         IPlateDetectStrategy.cpp
+     1>C:\OpenCV\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
+     1>C:\OpenCV\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
+     1>C:\OpenCV\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
+         IPlateDetect.cpp
+     1>C:\OpenCV\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
+     1>C:\OpenCV\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
+     1>C:\OpenCV\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\Lib.exe /OUT:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\PlateDetector.lib" opencv_world310d.lib /LIBPATH:C:\OpenCV\build\x64\vc12\lib /NOLOGO /MACHINE:X64 x64\Debug\CascadeTrainingStrategy.obj
+         x64\Debug\IPlateDetect.obj
+         x64\Debug\IPlateDetectStrategy.obj
+         x64\Debug\PlateDetector.obj
+     1>CascadeTrainingStrategy.obj : warning LNK4006: "public: __cdecl cv::String::String(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (??0String@cv@@QEAA@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>CascadeTrainingStrategy.obj : warning LNK4006: "public: __cdecl cv::_InputArray::_InputArray(class cv::Mat const &)" (??0_InputArray@cv@@QEAA@AEBVMat@1@@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>CascadeTrainingStrategy.obj : warning LNK4006: "public: __cdecl cv::String::~String(void)" (??1String@cv@@QEAA@XZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>CascadeTrainingStrategy.obj : warning LNK4006: "public: __cdecl cv::_InputArray::~_InputArray(void)" (??1_InputArray@cv@@QEAA@XZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>CascadeTrainingStrategy.obj : warning LNK4006: "protected: void __cdecl cv::_InputArray::init(int,void const *)" (?init@_InputArray@cv@@IEAAXHPEBX@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+         PlateDetector.vcxproj -> C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\PlateDetector.lib
+     1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\PlateDetector.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.21
+Time Elapsed 00:00:01.58

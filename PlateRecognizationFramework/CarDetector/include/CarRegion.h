@@ -6,7 +6,7 @@
 namespace pr{
 	class CarRegion{
 	public:
-		cv::Rect2d data;
+		cv::Rect data;
 	};
 }
 #endif

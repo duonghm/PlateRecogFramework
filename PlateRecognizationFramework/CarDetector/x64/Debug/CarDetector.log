@@ -1,34 +1,9 @@
-﻿Build started 3/12/2016 8:23:49 PM.
-     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CarDetector\CarDetector.vcxproj" on node 5 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Users\hmduong\Documents\Visual Studio 2013\Projects\PlateRecognizationFramework\CarDetector\include" /IC:\OpenCV\build\include /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt src\BackgroundSubtractionData.cpp src\BackgroundSubtractionStrategy.cpp src\CarDetector.cpp src\CarRegion.cpp src\ICarDetect.cpp
-         ICarDetect.cpp
-         CarRegion.cpp
-         CarDetector.cpp
-     1>C:\OpenCV\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>C:\OpenCV\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>C:\OpenCV\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-         BackgroundSubtractionStrategy.cpp
-     1>C:\OpenCV\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>C:\OpenCV\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>C:\OpenCV\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-         BackgroundSubtractionData.cpp
-         Generating Code...
-       Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\Lib.exe /OUT:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\CarDetector.lib" opencv_world310.lib /LIBPATH:C:\OpenCV\build\x64\vc12\lib /NOLOGO /MACHINE:X64 x64\Debug\BackgroundSubtractionData.obj
-         x64\Debug\BackgroundSubtractionStrategy.obj
-         x64\Debug\CarDetector.obj
-         x64\Debug\CarRegion.obj
-         x64\Debug\ICarDetect.obj
-     1>BackgroundSubtractionStrategy.obj : warning LNK4006: "public: __cdecl cv::_InputArray::_InputArray(class cv::Mat const &)" (??0_InputArray@cv@@QEAA@AEBVMat@1@@Z) already defined in opencv_world310.lib(opencv_world310.dll); second definition ignored
-     1>BackgroundSubtractionStrategy.obj : warning LNK4006: "public: __cdecl cv::_InputArray::_InputArray(void)" (??0_InputArray@cv@@QEAA@XZ) already defined in opencv_world310.lib(opencv_world310.dll); second definition ignored
-     1>BackgroundSubtractionStrategy.obj : warning LNK4006: "public: __cdecl cv::_OutputArray::_OutputArray(class cv::Mat &)" (??0_OutputArray@cv@@QEAA@AEAVMat@1@@Z) already defined in opencv_world310.lib(opencv_world310.dll); second definition ignored
-     1>BackgroundSubtractionStrategy.obj : warning LNK4006: "public: __cdecl cv::_InputArray::~_InputArray(void)" (??1_InputArray@cv@@QEAA@XZ) already defined in opencv_world310.lib(opencv_world310.dll); second definition ignored
-     1>BackgroundSubtractionStrategy.obj : warning LNK4006: "public: __cdecl cv::_OutputArray::~_OutputArray(void)" (??1_OutputArray@cv@@QEAA@XZ) already defined in opencv_world310.lib(opencv_world310.dll); second definition ignored
-     1>BackgroundSubtractionStrategy.obj : warning LNK4006: "protected: void __cdecl cv::_InputArray::init(int,void const *)" (?init@_InputArray@cv@@IEAAXHPEBX@Z) already defined in opencv_world310.lib(opencv_world310.dll); second definition ignored
+﻿Build started 3/13/2016 12:47:34 AM.
+     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CarDetector\CarDetector.vcxproj" on node 2 (Build target(s)).
+     1>Lib:
          CarDetector.vcxproj -> C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\CarDetector.lib
      1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CarDetector\CarDetector.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.26
+Time Elapsed 00:00:00.50
