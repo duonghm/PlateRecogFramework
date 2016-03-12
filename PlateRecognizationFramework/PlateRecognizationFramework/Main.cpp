@@ -3,8 +3,9 @@
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 
-#define TEST_CAMERA_CONVERTOR
-#define TEST_PLATE_DETECTOR
+//#define TEST_CAMERA_CONVERTOR
+//#define TEST_PLATE_DETECTOR
+#define TEST_PLATE_EXTRACTOR
 
 #ifdef TEST_CAMERA_CONVERTOR
 #include "TestCameraConvertorModule.h"
@@ -12,6 +13,10 @@
 
 #ifdef TEST_PLATE_DETECTOR
 #include "TestPlateDetectorModule.h"
+#endif
+
+#ifdef TEST_PLATE_EXTRACTOR
+#include "TestPlateExtractorModule.h"
 #endif
 
 using namespace cv;
@@ -26,6 +31,10 @@ int main(){
 
 #ifdef TEST_PLATE_DETECTOR
 	Test_PlateDetectorModule();
+#endif
+
+#ifdef TEST_PLATE_EXTRACTOR
+	Test_PlateExtractorModule();
 #endif
 
 	waitKey(0);

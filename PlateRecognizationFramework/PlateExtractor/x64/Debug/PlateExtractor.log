@@ -1,5 +1,50 @@
-﻿Build started 3/12/2016 8:23:50 PM.
+﻿Build started 3/13/2016 5:06:25 AM.
+     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateExtractor\PlateExtractor.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\OpenCV\build\include /IC:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\include /IC:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateExtractor\include /I"C:\tesseract-build\tesseract-ocr\api" /I"C:\tesseract-build\tesseract-ocr\ccmain" /I"C:\tesseract-build\tesseract-ocr\ccstruct" /I"C:\tesseract-build\tesseract-ocr\ccutil" /I"C:\tesseract-build\tesseract-ocr\classify" /I"C:\tesseract-build\include" /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt src\TesseractTextRecognizer.cpp
+         TesseractTextRecognizer.cpp
+     1>C:\OpenCV\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
+     1>C:\OpenCV\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
+     1>C:\OpenCV\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
+     1>c:\tesseract-build\include\leptonica\environ.h(446): warning C4005: 'snprintf' : macro redefinition
+                 C:\tesseract-build\tesseract-ocr\ccutil\platform.h(31) : see previous definition of 'snprintf'
+     1>c:\tesseract-build\include\leptonica\pix.h(209): warning C4305: 'initializing' : truncation from 'double' to 'const l_float32'
+     1>c:\tesseract-build\include\leptonica\pix.h(211): warning C4305: 'initializing' : truncation from 'double' to 'const l_float32'
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\Lib.exe /OUT:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\PlateExtractor.lib" opencv_world310d.lib /LIBPATH:C:\OpenCV\build\x64\vc12\lib /NOLOGO /MACHINE:X64 x64\Debug\IPlateExtract.obj
+         x64\Debug\PlateExtractor.obj
+         x64\Debug\PlateExtractStrategy.obj
+         x64\Debug\TesseractTextRecognizer.obj
+         x64\Debug\ITextRecognizer.obj
+     1>ITextRecognizer.obj : warning LNK4006: "public: __cdecl cv::Mat::~Mat(void)" (??1Mat@cv@@QEAA@XZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>ITextRecognizer.obj : warning LNK4006: "public: void __cdecl cv::Mat::release(void)" (?release@Mat@cv@@QEAAXXZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>TesseractTextRecognizer.obj : warning LNK4006: "public: __cdecl cv::_InputArray::_InputArray(class cv::Mat const &)" (??0_InputArray@cv@@QEAA@AEBVMat@1@@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>TesseractTextRecognizer.obj : warning LNK4006: "public: __cdecl cv::_InputArray::_InputArray(void)" (??0_InputArray@cv@@QEAA@XZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>TesseractTextRecognizer.obj : warning LNK4006: "public: __cdecl cv::_OutputArray::_OutputArray(class cv::Mat &)" (??0_OutputArray@cv@@QEAA@AEAVMat@1@@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>TesseractTextRecognizer.obj : warning LNK4006: "public: __cdecl cv::Mat::~Mat(void)" (??1Mat@cv@@QEAA@XZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>TesseractTextRecognizer.obj : warning LNK4006: "public: __cdecl cv::_InputArray::~_InputArray(void)" (??1_InputArray@cv@@QEAA@XZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>TesseractTextRecognizer.obj : warning LNK4006: "public: __cdecl cv::_OutputArray::~_OutputArray(void)" (??1_OutputArray@cv@@QEAA@XZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>TesseractTextRecognizer.obj : warning LNK4006: "protected: void __cdecl cv::_InputArray::init(int,void const *)" (?init@_InputArray@cv@@IEAAXHPEBX@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>TesseractTextRecognizer.obj : warning LNK4006: "public: void __cdecl cv::Mat::release(void)" (?release@Mat@cv@@QEAAXXZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>PlateExtractStrategy.obj : warning LNK4006: "public: __cdecl cv::Mat::Mat(class cv::Mat const &)" (??0Mat@cv@@QEAA@AEBV01@@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>PlateExtractStrategy.obj : warning LNK4006: "public: __cdecl cv::MatSize::MatSize(int *)" (??0MatSize@cv@@QEAA@PEAH@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>PlateExtractStrategy.obj : warning LNK4006: "public: __cdecl cv::MatStep::MatStep(void)" (??0MatStep@cv@@QEAA@XZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>PlateExtractStrategy.obj : warning LNK4006: "public: __cdecl cv::Mat::~Mat(void)" (??1Mat@cv@@QEAA@XZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>PlateExtractStrategy.obj : warning LNK4006: "public: unsigned __int64 & __cdecl cv::MatStep::operator[](int)" (??AMatStep@cv@@QEAAAEA_KH@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>PlateExtractStrategy.obj : warning LNK4006: "public: unsigned __int64 const & __cdecl cv::MatStep::operator[](int)const " (??AMatStep@cv@@QEBAAEB_KH@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>PlateExtractStrategy.obj : warning LNK4006: "public: void __cdecl cv::Mat::release(void)" (?release@Mat@cv@@QEAAXXZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>PlateExtractor.obj : warning LNK4006: "public: __cdecl cv::Mat::Mat(class cv::Mat const &)" (??0Mat@cv@@QEAA@AEBV01@@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>PlateExtractor.obj : warning LNK4006: "public: __cdecl cv::MatSize::MatSize(int *)" (??0MatSize@cv@@QEAA@PEAH@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>PlateExtractor.obj : warning LNK4006: "public: __cdecl cv::MatStep::MatStep(void)" (??0MatStep@cv@@QEAA@XZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>PlateExtractor.obj : warning LNK4006: "public: __cdecl cv::Mat::~Mat(void)" (??1Mat@cv@@QEAA@XZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>PlateExtractor.obj : warning LNK4006: "public: unsigned __int64 & __cdecl cv::MatStep::operator[](int)" (??AMatStep@cv@@QEAAAEA_KH@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>PlateExtractor.obj : warning LNK4006: "public: unsigned __int64 const & __cdecl cv::MatStep::operator[](int)const " (??AMatStep@cv@@QEBAAEB_KH@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>PlateExtractor.obj : warning LNK4006: "public: void __cdecl cv::Mat::release(void)" (?release@Mat@cv@@QEAAXXZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>IPlateExtract.obj : warning LNK4006: "public: __cdecl cv::Mat::~Mat(void)" (??1Mat@cv@@QEAA@XZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>IPlateExtract.obj : warning LNK4006: "public: void __cdecl cv::Mat::release(void)" (?release@Mat@cv@@QEAAXXZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+         PlateExtractor.vcxproj -> C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\PlateExtractor.lib
+     1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateExtractor\PlateExtractor.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.01
+Time Elapsed 00:00:01.38

@@ -1,12 +1,20 @@
-﻿Build started 3/13/2016 1:45:08 AM.
-     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\PlateDetector.vcxproj" on node 2 (Build target(s)).
+﻿Build started 3/13/2016 5:05:35 AM.
+     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\PlateDetector.vcxproj" on node 5 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\OpenCV\build\include /IC:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\include /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt src\IPlateDetect.cpp src\IPlateDetectStrategy.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\OpenCV\build\include /IC:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\include /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt src\CascadeTrainingStrategy.cpp src\IPlateDetect.cpp src\IPlateDetectStrategy.cpp src\PlateDetector.cpp
+         PlateDetector.cpp
+     1>C:\OpenCV\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
+     1>C:\OpenCV\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
+     1>C:\OpenCV\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
          IPlateDetectStrategy.cpp
      1>C:\OpenCV\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
      1>C:\OpenCV\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
      1>C:\OpenCV\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
          IPlateDetect.cpp
+     1>C:\OpenCV\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
+     1>C:\OpenCV\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
+     1>C:\OpenCV\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
+         CascadeTrainingStrategy.cpp
      1>C:\OpenCV\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
      1>C:\OpenCV\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
      1>C:\OpenCV\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
@@ -16,14 +24,22 @@
          x64\Debug\IPlateDetect.obj
          x64\Debug\IPlateDetectStrategy.obj
          x64\Debug\PlateDetector.obj
+     1>CascadeTrainingStrategy.obj : warning LNK4006: "public: __cdecl cv::Mat::Mat(class cv::Mat const &)" (??0Mat@cv@@QEAA@AEBV01@@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>CascadeTrainingStrategy.obj : warning LNK4006: "public: __cdecl cv::Mat::Mat(void)" (??0Mat@cv@@QEAA@XZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>CascadeTrainingStrategy.obj : warning LNK4006: "public: __cdecl cv::MatSize::MatSize(int *)" (??0MatSize@cv@@QEAA@PEAH@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>CascadeTrainingStrategy.obj : warning LNK4006: "public: __cdecl cv::MatStep::MatStep(void)" (??0MatStep@cv@@QEAA@XZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
      1>CascadeTrainingStrategy.obj : warning LNK4006: "public: __cdecl cv::String::String(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (??0String@cv@@QEAA@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
      1>CascadeTrainingStrategy.obj : warning LNK4006: "public: __cdecl cv::_InputArray::_InputArray(class cv::Mat const &)" (??0_InputArray@cv@@QEAA@AEBVMat@1@@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>CascadeTrainingStrategy.obj : warning LNK4006: "public: __cdecl cv::Mat::~Mat(void)" (??1Mat@cv@@QEAA@XZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
      1>CascadeTrainingStrategy.obj : warning LNK4006: "public: __cdecl cv::String::~String(void)" (??1String@cv@@QEAA@XZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
      1>CascadeTrainingStrategy.obj : warning LNK4006: "public: __cdecl cv::_InputArray::~_InputArray(void)" (??1_InputArray@cv@@QEAA@XZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>CascadeTrainingStrategy.obj : warning LNK4006: "public: unsigned __int64 & __cdecl cv::MatStep::operator[](int)" (??AMatStep@cv@@QEAAAEA_KH@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>CascadeTrainingStrategy.obj : warning LNK4006: "public: unsigned __int64 const & __cdecl cv::MatStep::operator[](int)const " (??AMatStep@cv@@QEBAAEB_KH@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
      1>CascadeTrainingStrategy.obj : warning LNK4006: "protected: void __cdecl cv::_InputArray::init(int,void const *)" (?init@_InputArray@cv@@IEAAXHPEBX@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
+     1>CascadeTrainingStrategy.obj : warning LNK4006: "public: void __cdecl cv::Mat::release(void)" (?release@Mat@cv@@QEAAXXZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
          PlateDetector.vcxproj -> C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\PlateDetector.lib
-     1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\PlateDetector.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\PlateDetector.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.58
+Time Elapsed 00:00:03.28

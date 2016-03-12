@@ -7,6 +7,7 @@ namespace pr{
 	class PlateRegion{
 	public:
 		cv::Rect region;		
+		cv::Mat imgData;
 	};
 }
 #endif

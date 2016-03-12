@@ -7,6 +7,7 @@ namespace pr{
 	class CarRegion{
 	public:
 		cv::Rect data;
+		cv::Mat imgData;
 	};
 }
 #endif

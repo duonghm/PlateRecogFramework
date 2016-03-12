@@ -66,7 +66,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>
@@ -89,11 +94,18 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\OpenCV\build\include;C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\include;C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateExtractor\include;C:\tesseract-build\tesseract-ocr\api;C:\tesseract-build\tesseract-ocr\ccmain;C:\tesseract-build\tesseract-ocr\ccstruct;C:\tesseract-build\tesseract-ocr\ccutil;C:\tesseract-build\tesseract-ocr\classify;C:\tesseract-build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalDependencies>opencv_world310d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>C:\OpenCV\build\x64\vc12\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -123,6 +135,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\OpenCV\build\include;C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\include;C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateExtractor\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -130,9 +143,30 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+    <Lib>
+      <AdditionalDependencies>opencv_world310d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>C:\OpenCV\build\x64\vc12\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\IPlateExtract.h" />
+    <ClInclude Include="include\PlateExtractor.h" />
+    <ClInclude Include="include\PlateExtractStrategy.h" />
+    <ClInclude Include="include\PlateFormat.h" />
+    <ClInclude Include="include\TesseractTextRecognizer.h" />
+    <ClInclude Include="include\ITextRecognizer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\IPlateExtract.cpp" />
+    <ClCompile Include="src\PlateExtractor.cpp" />
+    <ClCompile Include="src\PlateExtractStrategy.cpp" />
+    <ClCompile Include="src\TesseractTextRecognizer.cpp" />
+    <ClCompile Include="src\ITextRecognizer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

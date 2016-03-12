@@ -1,18 +1,18 @@
-﻿Build started 3/13/2016 1:53:47 AM.
+﻿Build started 3/13/2016 5:06:25 AM.
      1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateRecognizationFramework\PlateRecognizationFramework.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\OpenCV\build\include /IC:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CameraConvertor\include /IC:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\include /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt TestPlateDetectorModule.cpp
-         TestPlateDetectorModule.cpp
-     1>C:\OpenCV\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>C:\OpenCV\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>C:\OpenCV\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\PlateRecognizationFramework.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\OpenCV\build\x64\vc12\lib /LIBPATH:C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\ opencv_world310d.lib CameraConvertor.lib CarDetector.lib PlateDetector.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\PlateRecognizationFramework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\PlateRecognizationFramework.lib" /MACHINE:X64 x64\Debug\Main.obj
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\PlateRecognizationFramework.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\tesseract-build\lib\x64" /LIBPATH:"C:\tesseract-build\lib" /LIBPATH:C:\OpenCV\build\x64\vc12\lib /LIBPATH:C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\ opencv_world310d.lib libtesseract304.lib "giflib416-static-mtdll.lib" "libjpeg8c-static-mtdll.lib" liblept171.lib "liblept171-static-mtdll.lib" "libpng143-static-mtdll.lib" "libtiff394-static-mtdll.lib" "zlib128-static-mtdll.lib" CameraConvertor.lib CarDetector.lib PlateDetector.lib PlateExtractor.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\PlateRecognizationFramework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\PlateRecognizationFramework.lib" /MACHINE:X64 x64\Debug\Main.obj
          x64\Debug\TestCameraConvertorModule.obj
          x64\Debug\TestPlateDetectorModule.obj
+         x64\Debug\TestPlateExtractorModule.obj
+     1>PlateExtractor.lib(IPlateExtract.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'PlateExtractor.lib(IPlateExtract.obj)' or at 'C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\vc120.pdb'; linking object as if no debug info
+     1>PlateExtractor.lib(PlateExtractor.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'PlateExtractor.lib(PlateExtractor.obj)' or at 'C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\vc120.pdb'; linking object as if no debug info
+     1>PlateExtractor.lib(PlateExtractStrategy.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'PlateExtractor.lib(PlateExtractStrategy.obj)' or at 'C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\vc120.pdb'; linking object as if no debug info
+     1>PlateExtractor.lib(TesseractTextRecognizer.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'PlateExtractor.lib(TesseractTextRecognizer.obj)' or at 'C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\vc120.pdb'; linking object as if no debug info
+     1>PlateExtractor.lib(ITextRecognizer.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'PlateExtractor.lib(ITextRecognizer.obj)' or at 'C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\vc120.pdb'; linking object as if no debug info
          PlateRecognizationFramework.vcxproj -> C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\PlateRecognizationFramework.exe
      1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateRecognizationFramework\PlateRecognizationFramework.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.88
+Time Elapsed 00:00:00.25

@@ -24,12 +24,18 @@
     <ClCompile Include="TestCameraConvertorModule.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TestPlateExtractorModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TestCameraConvertorModule.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TestPlateDetectorModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestPlateExtractorModule.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
