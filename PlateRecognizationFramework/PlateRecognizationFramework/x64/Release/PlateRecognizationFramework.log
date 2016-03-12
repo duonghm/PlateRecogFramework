@@ -1,0 +1,11 @@
+﻿Build started 2/29/2016 2:23:26 AM.
+     1>Project "c:\Users\hmduong\documents\visual studio 2013\Projects\PlateRecognizationFramework\PlateRecognizationFramework\PlateRecognizationFramework.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\hmduong\documents\visual studio 2013\Projects\PlateRecognizationFramework\x64\Release\PlateRecognizationFramework.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:C:\OpenCV\build\x64\vc12\lib /LIBPATH:C:\lib opencv_world310.lib CameraConvertor.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"c:\users\hmduong\documents\visual studio 2013\Projects\PlateRecognizationFramework\x64\Release\PlateRecognizationFramework.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\hmduong\documents\visual studio 2013\Projects\PlateRecognizationFramework\x64\Release\PlateRecognizationFramework.lib" /MACHINE:X64 x64\Release\Main.obj
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __cdecl pr::CameraConvertor::CameraConvertor(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,enum pr::INPUT_TYPE)" (??0CameraConvertor@pr@@QEAA@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@W4INPUT_TYPE@1@@Z)
+     1>c:\users\hmduong\documents\visual studio 2013\Projects\PlateRecognizationFramework\x64\Release\PlateRecognizationFramework.exe : fatal error LNK1120: 1 unresolved externals
+     1>Done Building Project "c:\Users\hmduong\documents\visual studio 2013\Projects\PlateRecognizationFramework\PlateRecognizationFramework\PlateRecognizationFramework.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.18
