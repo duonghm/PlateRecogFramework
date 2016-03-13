@@ -1,5 +1,5 @@
-﻿Build started 3/14/2016 12:02:53 AM.
-     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CarDetector\CarDetector.vcxproj" on node 4 (Build target(s)).
+﻿Build started 3/13/2016 11:55:16 AM.
+     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CarDetector\CarDetector.vcxproj" on node 4 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Users\hmduong\Documents\Visual Studio 2013\Projects\PlateRecognizationFramework\CarDetector\include" /IC:\OpenCV\build\include /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt src\BackgroundSubtractionData.cpp src\BackgroundSubtractionStrategy.cpp src\CarDetector.cpp src\CarRegion.cpp src\ICarDetect.cpp
          ICarDetect.cpp
@@ -27,8 +27,8 @@
      1>BackgroundSubtractionStrategy.obj : warning LNK4006: "public: __cdecl cv::_OutputArray::~_OutputArray(void)" (??1_OutputArray@cv@@QEAA@XZ) already defined in opencv_world310.lib(opencv_world310.dll); second definition ignored
      1>BackgroundSubtractionStrategy.obj : warning LNK4006: "protected: void __cdecl cv::_InputArray::init(int,void const *)" (?init@_InputArray@cv@@IEAAXHPEBX@Z) already defined in opencv_world310.lib(opencv_world310.dll); second definition ignored
          CarDetector.vcxproj -> C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\CarDetector.lib
-     1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CarDetector\CarDetector.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CarDetector\CarDetector.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.14
+Time Elapsed 00:00:02.48

@@ -1,5 +1,5 @@
-﻿Build started 3/14/2016 12:02:53 AM.
-     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CameraConvertor\CameraConvertor.vcxproj" on node 3 (Build target(s)).
+﻿Build started 3/13/2016 11:55:15 AM.
+     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CameraConvertor\CameraConvertor.vcxproj" on node 3 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Users\hmduong\Documents\Visual Studio 2013\Projects\PlateRecognizationFramework\CameraConvertor\include" /IC:\OpenCV\build\include /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D CAMERACONVERTOR_EXPORTS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt src\CameraConvertor.cpp
          CameraConvertor.cpp
@@ -32,8 +32,8 @@
      1>CameraConvertor.obj : warning LNK4006: "public: void __cdecl cv::Mat::release(void)" (?release@Mat@cv@@QEAAXXZ) already defined in opencv_world310.lib(opencv_world310.dll); second definition ignored
      1>CameraConvertor.obj : warning LNK4006: "public: unsigned __int64 __cdecl cv::Mat::total(void)const " (?total@Mat@cv@@QEBA_KXZ) already defined in opencv_world310.lib(opencv_world310.dll); second definition ignored
          CameraConvertor.vcxproj -> C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\CameraConvertor.lib
-     1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CameraConvertor\CameraConvertor.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CameraConvertor\CameraConvertor.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.21
+Time Elapsed 00:00:01.60

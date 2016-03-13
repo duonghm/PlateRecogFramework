@@ -8,7 +8,8 @@ using namespace pr;
 
 
 std::string PlateExtractor::GetTextData(PlateRegion plate)
-{	
+{
+	std::cout << "Using PlateExtractor GetTextData" << std::endl;
 	return strategy->GetTextData(plate, recognizer);
 }
 
