@@ -4,6 +4,7 @@
 #include "IPlateExtract.h"
 #include "PlateExtractStrategy.h"
 #include "ITextRecognizer.h"
+#include <iostream>
 
 namespace pr{
 	class PlateExtractor : IPlateExtract{

@@ -154,6 +154,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\DirectExtractStrategy.h" />
     <ClInclude Include="include\IPlateExtract.h" />
     <ClInclude Include="include\PlateExtractor.h" />
     <ClInclude Include="include\PlateExtractStrategy.h" />
@@ -162,6 +163,7 @@
     <ClInclude Include="include\ITextRecognizer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\DirectExtractStrategy.cpp" />
     <ClCompile Include="src\IPlateExtract.cpp" />
     <ClCompile Include="src\PlateExtractor.cpp" />
     <ClCompile Include="src\PlateExtractStrategy.cpp" />

@@ -9,7 +9,8 @@ using namespace pr;
 
 std::string PlateExtractor::GetTextData(PlateRegion plate)
 {
-	return strategy->GetTextData(plate, *recognizer);
+	std::cout << "Using PlateExtractor GetTextData" << std::endl;
+	return strategy->GetTextData(plate, recognizer);
 }
 
 std::vector<std::string> PlateExtractor::GetTextData(std::vector<PlateRegion> plates)
@@ -22,13 +23,13 @@ std::vector<std::string> PlateExtractor::GetTextData(std::vector<PlateRegion> pl
 	return result;
 }
 
-void pr::PlateExtractor::SetStrategy(PlateExtractStrategy* strategy)
+void pr::PlateExtractor::SetStrategy(PlateExtractStrategy* stra)
 {
-	this->strategy = strategy;
+	this->strategy = stra;
 }
 
-void pr::PlateExtractor::SetRecognizer(ITextRecognizer* recognizer)
+void pr::PlateExtractor::SetRecognizer(ITextRecognizer* recog)
 {
-	this->recognizer = recognizer;
+	this->recognizer = recog;
 }
 

@@ -8,7 +8,7 @@
 namespace pr{
 	class PlateExtractStrategy{
 	public:
-		virtual std::string GetTextData(PlateRegion, ITextRecognizer);
+		virtual std::string GetTextData(PlateRegion, ITextRecognizer*);
 	};
 }
 
