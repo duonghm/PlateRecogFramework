@@ -5,7 +5,8 @@
 
 //#define TEST_CAMERA_CONVERTOR
 //#define TEST_PLATE_DETECTOR
-#define TEST_PLATE_EXTRACTOR
+//#define TEST_PLATE_EXTRACTOR
+#define TEST_PLATE_RECOGNIZATOR
 
 #ifdef TEST_CAMERA_CONVERTOR
 #include "TestCameraConvertorModule.h"
@@ -17,6 +18,10 @@
 
 #ifdef TEST_PLATE_EXTRACTOR
 #include "TestPlateExtractorModule.h"
+#endif
+
+#ifdef TEST_PLATE_RECOGNIZATOR
+#include "PlateRecognizator.h"
 #endif
 
 using namespace cv;
@@ -35,6 +40,15 @@ int main(){
 
 #ifdef TEST_PLATE_EXTRACTOR
 	Test_PlateExtractorModule();
+#endif
+
+#ifdef TEST_PLATE_RECOGNIZATOR
+	PlateRecognizator recognizator;
+	recognizator.Init("../data/samples/vn-39.jpg", "../data/plateCascade/vn.xml");
+	std::vector<std::string> result = recognizator.GetResult();
+	for (int i = 0; i < result.size(); i++){
+		std::cout << "Plate " << std::to_string(i) << ": " << result[i] << std::endl;
+	}
 #endif
 
 	waitKey(0);

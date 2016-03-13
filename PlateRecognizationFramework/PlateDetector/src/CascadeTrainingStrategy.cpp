@@ -14,6 +14,7 @@ std::vector<PlateRegion> CascadeTrainingStrategy::GetPlateRegions(PlateDetectorI
 	for (int i = 0; i < plates.size(); i++){
 		PlateRegion p;
 		p.region = plates.at(i);
+		p.imgData = cdata->img(p.region).clone();
 		platesRegions.push_back(p);
 	}
 	return platesRegions;

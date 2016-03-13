@@ -1,3 +1,6 @@
+#ifndef CAMERA_CONVERTOR_H
+#define CAMERA_CONVERTOR_H
+
 #include <opencv2/opencv.hpp>
 
 namespace pr{
@@ -18,7 +21,7 @@ namespace pr{
 		int current_cache_size = 0;
 		cv::VideoCapture cap;
 		void AddImageToCache(cv::Mat img);
-	public:
+	public:		
 		CameraConvertor(std::string source, INPUT_TYPE type, cv::ImreadModes mode);
 		CameraConvertor(std::string source, INPUT_TYPE type);
 		void LoadData(std::string source, INPUT_TYPE type, cv::ImreadModes mode);
@@ -27,6 +30,8 @@ namespace pr{
 	};
 
 }
+
+#endif
 
 
 

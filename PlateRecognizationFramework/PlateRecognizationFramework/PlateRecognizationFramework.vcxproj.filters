@@ -13,29 +13,41 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\test">
+      <UniqueIdentifier>{74315d27-230f-4a3b-82b9-9976452613fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\test">
+      <UniqueIdentifier>{e57f3194-c10e-4e3d-a9b6-52f5db3ce2b8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TestPlateDetectorModule.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="test\TestCameraConvertorModule.cpp">
+      <Filter>Source Files\test</Filter>
     </ClCompile>
-    <ClCompile Include="TestCameraConvertorModule.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="test\TestPlateDetectorModule.cpp">
+      <Filter>Source Files\test</Filter>
     </ClCompile>
-    <ClCompile Include="TestPlateExtractorModule.cpp">
+    <ClCompile Include="test\TestPlateExtractorModule.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlateRecognizator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TestCameraConvertorModule.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="test\TestCameraConvertorModule.h">
+      <Filter>Header Files\test</Filter>
     </ClInclude>
-    <ClInclude Include="TestPlateDetectorModule.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="test\TestPlateDetectorModule.h">
+      <Filter>Header Files\test</Filter>
     </ClInclude>
-    <ClInclude Include="TestPlateExtractorModule.h">
+    <ClInclude Include="test\TestPlateExtractorModule.h">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PlateRecognizator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
