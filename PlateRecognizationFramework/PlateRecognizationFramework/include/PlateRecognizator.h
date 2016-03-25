@@ -11,17 +11,18 @@
 namespace pr{
 	class PlateRecognizator{
 	private:
-		std::string sourceURL;
+		cv::Mat img;
 		std::string cascadeFileURL;		
 
-		CameraConvertor* cam;
 		CarDetector* carDetector;
 		PlateDetector* plateDetector;
 		PlateExtractor* plateExtractor;
 				
 	public:
-		void Init(std::string sourceURL, std::string cascadeFileURL);
+		void Init(std::string cascadeFileURL);
 		std::vector<std::string> GetResult();
+		std::vector <pr::PlateRegion> GetPlateRegions();
+		void SetImg(cv::Mat img);
 		void InitInput();
 		void InitPlateDetector();
 		void InitPlateExtractor();

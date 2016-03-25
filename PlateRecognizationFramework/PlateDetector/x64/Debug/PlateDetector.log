@@ -1,24 +1,11 @@
-﻿Build started 3/14/2016 2:28:32 AM.
-     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\PlateDetector.vcxproj" on node 4 (Rebuild target(s)).
+﻿Build started 3/26/2016 3:26:58 AM.
+     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\PlateDetector.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\OpenCV\build\include /IC:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\include /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt src\CascadeTrainingStrategy.cpp src\IPlateDetect.cpp src\IPlateDetectStrategy.cpp src\PlateDetector.cpp
-         PlateDetector.cpp
-     1>C:\OpenCV\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>C:\OpenCV\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>C:\OpenCV\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-         IPlateDetectStrategy.cpp
-     1>C:\OpenCV\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>C:\OpenCV\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>C:\OpenCV\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-         IPlateDetect.cpp
-     1>C:\OpenCV\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>C:\OpenCV\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>C:\OpenCV\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\OpenCV\build\include /IC:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\include /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt src\CascadeTrainingStrategy.cpp
          CascadeTrainingStrategy.cpp
      1>C:\OpenCV\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
      1>C:\OpenCV\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
      1>C:\OpenCV\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-         Generating Code...
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\Lib.exe /OUT:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\PlateDetector.lib" opencv_world310d.lib /LIBPATH:C:\OpenCV\build\x64\vc12\lib /NOLOGO /MACHINE:X64 x64\Debug\CascadeTrainingStrategy.obj
          x64\Debug\IPlateDetect.obj
@@ -46,8 +33,8 @@
      1>CascadeTrainingStrategy.obj : warning LNK4006: "protected: void __cdecl cv::_InputArray::init(int,void const *)" (?init@_InputArray@cv@@IEAAXHPEBX@Z) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
      1>CascadeTrainingStrategy.obj : warning LNK4006: "public: void __cdecl cv::Mat::release(void)" (?release@Mat@cv@@QEAAXXZ) already defined in opencv_world310d.lib(opencv_world310d.dll); second definition ignored
          PlateDetector.vcxproj -> C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\PlateDetector.lib
-     1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\PlateDetector.vcxproj" (Rebuild target(s)).
+     1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\PlateDetector.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.60
+Time Elapsed 00:00:00.90

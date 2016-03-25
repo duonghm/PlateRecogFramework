@@ -23,6 +23,11 @@ cv::Mat* CameraConvertor::GetImage(int frame)
 		}
 		break;
 	case pr::CAMERA:
+		if (frame > 0){
+			int size = frame > current_cache_size ? frame : current_cache_size;
+			cv::Mat* arr = new cv::Mat[size];
+			std::memcpy(arr, cacheImg, size);
+		}
 		break;
 	default:
 		break;
@@ -44,6 +49,10 @@ cv::Mat CameraConvertor::GetImage()
 		}		
 		break;
 	case CAMERA:
+		cap.read(img);
+		if (!img.empty()){
+			AddImageToCache(img);
+		}
 		break;
 	default:
 		break;
@@ -64,6 +73,7 @@ void pr::CameraConvertor::LoadData(std::string source, INPUT_TYPE type, cv::Imre
 		cap = cv::VideoCapture(source);
 		break;
 	case CAMERA:
+		cap = cv::VideoCapture(source);
 		break;
 	default:
 		break;

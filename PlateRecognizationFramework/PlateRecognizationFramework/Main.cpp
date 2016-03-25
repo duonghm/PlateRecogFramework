@@ -43,12 +43,26 @@ int main(){
 #endif
 
 #ifdef TEST_PLATE_RECOGNIZATOR
+	CameraConvertor cam = CameraConvertor("F:/FIT8/fit8.ts", VIDEO, cv::IMREAD_ANYCOLOR);
 	PlateRecognizator recognizator;
-	recognizator.Init("../data/samples/vn-39.jpg", "../data/plateCascade/vn.xml");
-	std::vector<std::string> result = recognizator.GetResult();
+	recognizator.Init("../data/plateCascade/eu.xml");
+	while (true){
+		cv::Mat img = cam.GetImage();
+		cv::Mat dis = img.clone();
+		if (img.empty()){continue;}
+		recognizator.SetImg(img);
+		std::vector<pr::PlateRegion> plates = recognizator.GetPlateRegions();
+		//for (int i = 0; i<plates.size(); i++){
+		//	cv::rectangle(dis, plates[i].region, Scalar(255, 255, 0), 2, 8, 0);
+		//}
+		cv::resize(dis, dis, dis.size() / 2);
+		cv::imshow("FIT8", dis);
+		if (waitKey(1) > 0)break;
+	}
+	/*std::vector<std::string> result = recognizator.GetResult();
 	for (int i = 0; i < result.size(); i++){
 		std::cout << "Plate " << std::to_string(i) << ": " << result[i] << std::endl;
-	}
+	}*/
 #endif
 
 	waitKey(0);

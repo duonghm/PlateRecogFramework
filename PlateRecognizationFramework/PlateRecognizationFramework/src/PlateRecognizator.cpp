@@ -7,11 +7,26 @@
 
 using namespace pr;
 
-#define DEBUG
+//#define DEBUG
 
 std::vector<std::string> PlateRecognizator::GetResult()
+{	
+	std::vector<PlateRegion> plates = GetPlateRegions();
+	
+#ifdef DEBUG	
+	for (int i = 0; i < plates.size(); i++){
+		imshow("plate"+std::to_string(i), plates[i].imgData);
+	}
+#endif // DEBUG
+	
+	// Extract Plate data
+	std::vector<std::string> platesText = plateExtractor->GetTextData(plates);
+	return platesText;	
+}
+
+std::vector<pr::PlateRegion> PlateRecognizator::GetPlateRegions()
 {
-	cv::Mat img = cam->GetImage();
+	//cv::Mat img = cam->GetImage();
 	cv::cvtColor(img, img, cv::COLOR_RGB2GRAY);
 
 	// Get Plates Regions
@@ -20,23 +35,12 @@ std::vector<std::string> PlateRecognizator::GetResult()
 	PlateDetectorInputData* plateDetectorData = (PlateDetectorInputData*)casData;
 	plateDetector->SetInputData(plateDetectorData);
 	std::vector<PlateRegion> plates = plateDetector->GetPlateRegions();
-	
-#ifdef DEBUG	
-	for (int i = 0; i < plates.size(); i++){
-		imshow("plate"+std::to_string(i), plates[i].imgData);
-	}
-#endif // DEBUG
 
-	
-
-	// Extract Plate data
-	std::vector<std::string> platesText = plateExtractor->GetTextData(plates);
-	return platesText;	
+	return plates;
 }
 
-void pr::PlateRecognizator::Init(std::string sourceURL, std::string cascadeFileURL)
-{
-	this->sourceURL = sourceURL;
+void pr::PlateRecognizator::Init(std::string cascadeFileURL)
+{	
 	this->cascadeFileURL = cascadeFileURL;
 	InitInput();
 	InitPlateDetector();
@@ -45,13 +49,15 @@ void pr::PlateRecognizator::Init(std::string sourceURL, std::string cascadeFileU
 
 void pr::PlateRecognizator::InitInput()
 {	
-	cam = new CameraConvertor(sourceURL, IMAGE, cv::IMREAD_ANYCOLOR);
+	
 }
 
 void pr::PlateRecognizator::InitPlateDetector()
 {
 	plateDetector = new PlateDetector();
 	CascadeTrainingStrategy* casStrategy = new CascadeTrainingStrategy(cascadeFileURL);
+	casStrategy->SetMinSize(cv::Size(30, 30));
+	casStrategy->SetMaxSize(cv::Size(150, 150));
 	IPlateDetectStrategy* strategy = (IPlateDetectStrategy*)casStrategy;
 	plateDetector->SetDetectStrategy(strategy);	
 }
@@ -69,4 +75,9 @@ void pr::PlateRecognizator::InitPlateExtractor()
 
 	plateExtractor->SetStrategy(strategy);
 	plateExtractor->SetRecognizer(recognizer);
+}
+
+void pr::PlateRecognizator::SetImg(cv::Mat img)
+{
+	this->img = img;
 }

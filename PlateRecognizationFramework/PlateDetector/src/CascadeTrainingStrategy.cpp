@@ -36,3 +36,13 @@ void pr::CascadeTrainingStrategy::LoadCascadeFile(std::string file)
 	classfier.load(cascadeFile);
 }
 
+void pr::CascadeTrainingStrategy::SetMinSize(cv::Size minSize)
+{
+	this->minSize = minSize;
+}
+
+void pr::CascadeTrainingStrategy::SetMaxSize(cv::Size maxSize)
+{
+	this->maxSize = maxSize;
+}
+

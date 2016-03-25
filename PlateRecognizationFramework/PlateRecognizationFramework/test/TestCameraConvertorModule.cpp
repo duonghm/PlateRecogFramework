@@ -10,7 +10,18 @@ void Test_CameraModule_1(){
 	imshow("test", img);
 }
 
+void Test_CameraModule_2(){
+	std::string sourceURL = "F:/FIT8/fit8.ts";
+	CameraConvertor camconv = CameraConvertor(sourceURL, VIDEO, cv::IMREAD_ANYCOLOR);
+	while (true){
+		cv::Mat img = camconv.GetImage();
+		if (cv::waitKey(1) > 0) break;
+		imshow("test", img);
+	}
+	
+}
+
 void Test_CameraModule()
 {
-	Test_CameraModule_1();
+	Test_CameraModule_2();
 }

@@ -19,6 +19,8 @@ namespace pr{
 		CascadeTrainingStrategy(std::string);
 		void LoadCascadeFile(std::string);
 		std::vector<PlateRegion> GetPlateRegions(PlateDetectorInputData* data) override;
+		void SetMinSize(cv::Size minSize);
+		void SetMaxSize(cv::Size maxSize);
 	};
 }
 
