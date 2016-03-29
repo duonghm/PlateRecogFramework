@@ -43,19 +43,34 @@ int main(){
 #endif
 
 #ifdef TEST_PLATE_RECOGNIZATOR
-	CameraConvertor cam = CameraConvertor("F:/FIT8/fit8.ts", VIDEO, cv::IMREAD_ANYCOLOR);
-	PlateRecognizator recognizator;
-	recognizator.Init("../data/plateCascade/eu.xml");
+	//CameraConvertor cam = CameraConvertor("F:/FIT8/fit8.ts", VIDEO, cv::IMREAD_ANYCOLOR);
+	CameraConvertor cam = CameraConvertor("F:/FIT8/fit8.ts", VIDEO, cv::IMREAD_GRAYSCALE);
+	PlateRecognizator recognizator_wide;
+	recognizator_wide.Init("../data/plateCascade/eu.xml");
+	PlateRecognizator recognizator_rect;
+	recognizator_rect.Init("../data/plateCascade/vn.xml");
+
+	std::vector<pr::PlateRegion> plates_wide;
+	std::vector<pr::PlateRegion> plates_rect;
 	while (true){
 		cv::Mat img = cam.GetImage();
+		cv::resize(img, img, img.size() / 2);
 		cv::Mat dis = img.clone();
 		if (img.empty()){continue;}
-		recognizator.SetImg(img);
-		std::vector<pr::PlateRegion> plates = recognizator.GetPlateRegions();
-		//for (int i = 0; i<plates.size(); i++){
-		//	cv::rectangle(dis, plates[i].region, Scalar(255, 255, 0), 2, 8, 0);
-		//}
-		cv::resize(dis, dis, dis.size() / 2);
+		recognizator_wide.SetImg(img);
+		recognizator_rect.SetImg(img);
+		plates_wide = recognizator_wide.GetPlateRegions();
+		plates_rect = recognizator_rect.GetPlateRegions();
+		if (plates_wide.size() > 0) std::cout << "Wide: " << plates_wide.size() << std::endl;
+		if (plates_rect.size() > 0) std::cout << "Rect: " << plates_rect.size() << std::endl;
+		std::cout << "---------" << std::endl;
+		for (int i = 0; i<plates_wide.size(); i++){
+			cv::rectangle(dis, plates_wide[i].region, Scalar(255, 255, 0), 2, 8, 0);
+		}
+		for (int i = 0; i<plates_rect.size(); i++){
+			cv::rectangle(dis, plates_rect[i].region, Scalar(255, 0, 255), 2, 8, 0);
+		}
+		//cv::resize(dis, dis, dis.size() / 2);
 		cv::imshow("FIT8", dis);
 		if (waitKey(1) > 0)break;
 	}

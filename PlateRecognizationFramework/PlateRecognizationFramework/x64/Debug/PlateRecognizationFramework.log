@@ -1,12 +1,6 @@
-﻿Build started 3/26/2016 3:34:41 AM.
+﻿Build started 3/30/2016 3:57:47 AM.
      1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateRecognizationFramework\PlateRecognizationFramework.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\OpenCV\build\include /IC:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CameraConvertor\include /IC:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CarDetector\include /IC:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\include /IC:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateExtractor\include /I"C:\tesseract-build\tesseract-ocr\api" /I"C:\tesseract-build\tesseract-ocr\ccmain" /I"C:\tesseract-build\tesseract-ocr\ccstruct" /I"C:\tesseract-build\tesseract-ocr\ccutil" /I"C:\tesseract-build\tesseract-ocr\classify" /IC:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateRecognizationFramework\include /IC:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateRecognizationFramework\test /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt Main.cpp
-         Main.cpp
-     1>C:\OpenCV\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>C:\OpenCV\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>C:\OpenCV\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-       Link:
+     1>Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\PlateRecognizationFramework.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\tesseract-build\lib\x64" /LIBPATH:"C:\tesseract-build\lib" /LIBPATH:C:\OpenCV\build\x64\vc12\lib /LIBPATH:C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\ opencv_world310d.lib libtesseract304.lib "giflib416-static-mtdll.lib" "libjpeg8c-static-mtdll.lib" liblept171.lib "liblept171-static-mtdll.lib" "libpng143-static-mtdll.lib" "libtiff394-static-mtdll.lib" "zlib128-static-mtdll.lib" CameraConvertor.lib CarDetector.lib PlateDetector.lib PlateExtractor.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\PlateRecognizationFramework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\PlateRecognizationFramework.lib" /MACHINE:X64 x64\Debug\Main.obj
          x64\Debug\PlateRecognizator.obj
          x64\Debug\TestCameraConvertorModule.obj
@@ -17,4 +11,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.95
+Time Elapsed 00:00:00.26

@@ -27,7 +27,7 @@ std::vector<std::string> PlateRecognizator::GetResult()
 std::vector<pr::PlateRegion> PlateRecognizator::GetPlateRegions()
 {
 	//cv::Mat img = cam->GetImage();
-	cv::cvtColor(img, img, cv::COLOR_RGB2GRAY);
+	//cv::cvtColor(img, img, cv::COLOR_RGB2GRAY);
 
 	// Get Plates Regions
 	CascadeTrainingInputData* casData = new CascadeTrainingInputData();
@@ -56,8 +56,8 @@ void pr::PlateRecognizator::InitPlateDetector()
 {
 	plateDetector = new PlateDetector();
 	CascadeTrainingStrategy* casStrategy = new CascadeTrainingStrategy(cascadeFileURL);
-	casStrategy->SetMinSize(cv::Size(30, 30));
-	casStrategy->SetMaxSize(cv::Size(150, 150));
+	casStrategy->SetMinSize(cv::Size(1, 1));
+	casStrategy->SetMaxSize(cv::Size(100, 100));
 	IPlateDetectStrategy* strategy = (IPlateDetectStrategy*)casStrategy;
 	plateDetector->SetDetectStrategy(strategy);	
 }
