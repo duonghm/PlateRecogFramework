@@ -1,5 +1,5 @@
-﻿Build started 3/30/2016 3:56:56 AM.
-     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CameraConvertor\CameraConvertor.vcxproj" on node 3 (Build target(s)).
+﻿Build started 3/30/2016 4:24:06 AM.
+     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CameraConvertor\CameraConvertor.vcxproj" on node 3 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\OpenCV\build\include /Iinclude /IC:\OpenCV\build\include /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D CAMERACONVERTOR_EXPORTS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt src\CameraConvertor.cpp
          CameraConvertor.cpp
@@ -10,8 +10,8 @@
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\Lib.exe /OUT:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\CameraConvertor.lib" /NOLOGO /MACHINE:X64 x64\Debug\CameraConvertor.obj
          CameraConvertor.vcxproj -> C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\x64\Debug\CameraConvertor.lib
-     1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CameraConvertor\CameraConvertor.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\CameraConvertor\CameraConvertor.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.21
+Time Elapsed 00:00:00.94

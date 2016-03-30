@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FilterModule", "FilterModul
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PlateExtractor", "PlateExtractor\PlateExtractor.vcxproj", "{3B232687-F165-4FF9-89EC-9BF80CC8377D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TrainingTool", "TrainingTool\TrainingTool.vcxproj", "{B2E3638C-3D91-46B3-B873-B39C6FA360DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -92,6 +94,16 @@ Global
 		{3B232687-F165-4FF9-89EC-9BF80CC8377D}.Release|Win32.ActiveCfg = Release|Win32
 		{3B232687-F165-4FF9-89EC-9BF80CC8377D}.Release|Win32.Build.0 = Release|Win32
 		{3B232687-F165-4FF9-89EC-9BF80CC8377D}.Release|x64.ActiveCfg = Release|x64
+		{B2E3638C-3D91-46B3-B873-B39C6FA360DD}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{B2E3638C-3D91-46B3-B873-B39C6FA360DD}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{B2E3638C-3D91-46B3-B873-B39C6FA360DD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B2E3638C-3D91-46B3-B873-B39C6FA360DD}.Debug|Win32.Build.0 = Debug|Win32
+		{B2E3638C-3D91-46B3-B873-B39C6FA360DD}.Debug|x64.ActiveCfg = Debug|x64
+		{B2E3638C-3D91-46B3-B873-B39C6FA360DD}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{B2E3638C-3D91-46B3-B873-B39C6FA360DD}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{B2E3638C-3D91-46B3-B873-B39C6FA360DD}.Release|Win32.ActiveCfg = Release|Win32
+		{B2E3638C-3D91-46B3-B873-B39C6FA360DD}.Release|Win32.Build.0 = Release|Win32
+		{B2E3638C-3D91-46B3-B873-B39C6FA360DD}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
