@@ -56,8 +56,8 @@ void pr::PlateRecognizator::InitPlateDetector()
 {
 	plateDetector = new PlateDetector();
 	CascadeTrainingStrategy* casStrategy = new CascadeTrainingStrategy(cascadeFileURL);
-	casStrategy->SetMinSize(cv::Size(1, 1));
-	casStrategy->SetMaxSize(cv::Size(100, 100));
+	casStrategy->SetMinSize(cv::Size(30, 30));
+	casStrategy->SetMaxSize(cv::Size(70, 70));
 	IPlateDetectStrategy* strategy = (IPlateDetectStrategy*)casStrategy;
 	plateDetector->SetDetectStrategy(strategy);	
 }

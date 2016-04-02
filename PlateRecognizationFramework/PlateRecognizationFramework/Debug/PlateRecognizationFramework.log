@@ -1,16 +1,136 @@
-﻿Build started 2/29/2016 2:39:03 AM.
-     1>Project "C:\Users\hmduong\documents\visual studio 2013\Projects\PlateRecognizationFramework\PlateRecognizationFramework\PlateRecognizationFramework.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\OpenCV\build\include /I"C:\Users\hmduong\Documents\Visual Studio 2013\Projects\PlateRecognizationFramework\CameraConvertor\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
-         Main.cpp
-     1>c:\opencv\build\include\opencv2\core\mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>c:\opencv\build\include\opencv2\core\persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>c:\opencv\build\include\opencv2\core\utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\hmduong\documents\visual studio 2013\Projects\PlateRecognizationFramework\Debug\PlateRecognizationFramework.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\hmduong\Documents\Visual Studio 2013\Projects\PlateRecognizationFramework\x64\Debug" /LIBPATH:C:\OpenCV\build\x64\vc12\lib opencv_world310.lib opencv_world310d.lib CameraConvertor.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\hmduong\documents\visual studio 2013\Projects\PlateRecognizationFramework\Debug\PlateRecognizationFramework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\hmduong\documents\visual studio 2013\Projects\PlateRecognizationFramework\Debug\PlateRecognizationFramework.lib" /MACHINE:X86 Debug\Main.obj
-     1>opencv_world310.lib(opencv_world310.dll) : fatal error LNK1112: module machine type 'x64' conflicts with target machine type 'X86'
-     1>Done Building Project "C:\Users\hmduong\documents\visual studio 2013\Projects\PlateRecognizationFramework\PlateRecognizationFramework\PlateRecognizationFramework.vcxproj" (Build target(s)) -- FAILED.
+﻿Build started 4/2/2016 8:12:24 PM.
+     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateRecognizationFramework\PlateRecognizationFramework.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\Debug\PlateRecognizationFramework.exe" /INCREMENTAL /NOLOGO /LIBPATH:E:\PlateRecogExtendedLib\tesseract\lib\Win32 /LIBPATH:E:\PlateRecogExtendedLib\tesseract\lib /LIBPATH:E:\PlateRecogExtendedLib\opencv\build\x86\vc12\lib /LIBPATH:C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\Debug\ CameraConvertor.lib CarDetector.lib PlateDetector.lib PlateExtractor.lib opencv_world300.lib ws2_32.lib user32.lib "zlib128-static-mtdll.lib" "libpng143-static-mtdll.lib" "libjpeg8c-static-mtdll.lib" "giflib416-static-mtdll.lib" "libtiff394-static-mtdll.lib" "liblept171-static-mtdll.lib" "libtesseract304-static.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\Debug\PlateRecognizationFramework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\Debug\PlateRecognizationFramework.lib" /MACHINE:X86 Debug\Main.obj
+         Debug\PlateRecognizator.obj
+         Debug\TestCameraConvertorModule.obj
+         Debug\TestPlateDetectorModule.obj
+         Debug\TestPlateExtractorModule.obj
+     1>libtesseract304-static.lib(baseapi.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(baseapi.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(tesseractclass.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(tesseractclass.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(pagesegmain.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(pagesegmain.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(paragraphs.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(paragraphs.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(equationdetect.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(equationdetect.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(osdetect.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(osdetect.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(scrollview.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(scrollview.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(cube_reco_context.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(cube_reco_context.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(tabvector.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(tabvector.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(alignedblob.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(alignedblob.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(linefind.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(linefind.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(imagefind.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(imagefind.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(colfind.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(colfind.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(cube_control.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(cube_control.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(paramsd.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(paramsd.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(svmnode.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(svmnode.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(bbgrid.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(bbgrid.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(colpartition.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(colpartition.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(svutil.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(svutil.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(cube_tuning_params.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(cube_tuning_params.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(char_set.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(char_set.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(cube_utils.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(cube_utils.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(word_size_model.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(word_size_model.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(char_bigrams.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(char_bigrams.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(word_unigrams.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(word_unigrams.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(classifier_factory.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(classifier_factory.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(tess_lang_model.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(tess_lang_model.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(tabfind.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(tabfind.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(blobgrid.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(blobgrid.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(colpartitionset.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(colpartitionset.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(colpartitiongrid.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(colpartitiongrid.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(textlineprojection.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(textlineprojection.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(ccnontextdetect.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(ccnontextdetect.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(strokewidth.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(strokewidth.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(tablefind.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(tablefind.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(workingpartset.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(workingpartset.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(beam_search.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(beam_search.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(cube_object.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(cube_object.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(tesseract_cube_combiner.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(tesseract_cube_combiner.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(char_samp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(char_samp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(conv_net_classifier.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(conv_net_classifier.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(feature_bmp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(feature_bmp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(feature_chebyshev.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(feature_chebyshev.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(feature_hybrid.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(feature_hybrid.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(hybrid_neural_net_classifier.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(hybrid_neural_net_classifier.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(tess_lang_mod_edge.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(tess_lang_mod_edge.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(tablerecog.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(tablerecog.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(search_node.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(search_node.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(search_column.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(search_column.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(word_altlist.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(word_altlist.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(bmp_8.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(bmp_8.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(cube_search_object.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(cube_search_object.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(word_list_lang_model.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(word_list_lang_model.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(neural_net.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(neural_net.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(cached_file.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(cached_file.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(char_altlist.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(char_altlist.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(altlist.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(altlist.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(neuron.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(neuron.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(input_file_buffer.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(input_file_buffer.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+     1>libtesseract304-static.lib(sigmoid_table.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
+     1>libtesseract304-static.lib(sigmoid_table.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
+            Creating library C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\Debug\PlateRecognizationFramework.lib and object C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\Debug\PlateRecognizationFramework.exp
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\Debug\PlateRecognizationFramework.exe : fatal error LNK1319: 120 mismatches detected
+     1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateRecognizationFramework\PlateRecognizationFramework.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:00.88
+Time Elapsed 00:00:00.30

@@ -31,7 +31,8 @@ int main(){
 	namedWindow(videoWindowName);		
 	setMouseCallback(videoWindowName, onMouse, NULL);
 
-	CameraConvertor cam = CameraConvertor("F:/FIT8/fit8.ts", VIDEO, IMREAD_ANYCOLOR);
+	//CameraConvertor cam = CameraConvertor("F:/FIT8/fit8.ts", VIDEO, IMREAD_ANYCOLOR);
+	CameraConvertor cam = CameraConvertor("F:/FIT8/short4.ts", VIDEO, IMREAD_ANYCOLOR);
 	Mat img;
 	Mat cropImg;
 	Mat displayImg;

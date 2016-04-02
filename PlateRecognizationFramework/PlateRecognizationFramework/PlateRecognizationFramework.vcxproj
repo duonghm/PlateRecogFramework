@@ -88,13 +88,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\OpenCV\build\include;C:\Users\hmduong\Documents\Visual Studio 2013\Projects\PlateRecognizationFramework\CameraConvertor\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OPENCV_DIR)\include;..\CameraConvertor\include;..\CarDetector\include;..\PlateDetector\include;..\PlateExtractor\include;include;test;$(TESSERACT_BUILD)\tesseract-ocr\api;$(TESSERACT_BUILD)\tesseract-ocr\ccmain;$(TESSERACT_BUILD)\tesseract-ocr\ccstruct;$(TESSERACT_BUILD)\tesseract-ocr\ccutil;$(TESSERACT_BUILD)\tesseract-ocr\classify;$(TESSERACT_BUILD)\tesseract-ocr\contrib;$(TESSERACT_BUILD)\tesseract-ocr\cube;$(VLC_SDK)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\hmduong\Documents\Visual Studio 2013\Projects\PlateRecognizationFramework\x64\Debug;C:\OpenCV\build\x64\vc12\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_world310.lib;opencv_world310d.lib;CameraConvertor.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(VLC_SDK)\lib;$(TESSERACT_BUILD)\lib\Win32;$(TESSERACT_BUILD)\lib;$(OPENCV_DIR)\x86\vc12\lib;$(SolutionDir)$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CameraConvertor.lib;CarDetector.lib;PlateDetector.lib;PlateExtractor.lib;opencv_world300.lib;ws2_32.lib;user32.lib;zlib128-static-mtdll.lib;libpng143-static-mtdll.lib;libjpeg8c-static-mtdll.lib;giflib416-static-mtdll.lib;libtiff394-static-mtdll.lib;liblept171-static-mtdll.lib;libtesseract304-static.lib;libvlc.lib;libvlccore.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -105,13 +105,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(OPENCV_DIR)\include;..\CameraConvertor\include;..\CarDetector\include;..\PlateDetector\include;..\PlateExtractor\include;$(TESSERACT_BUILD)\tesseract-ocr\api;$(TESSERACT_BUILD)\tesseract-ocr\ccmain;$(TESSERACT_BUILD)\tesseract-ocr\ccstruct;$(TESSERACT_BUILD)\tesseract-ocr\ccutil;$(TESSERACT_BUILD)\tesseract-ocr\classify;include;test</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(VLC_SDK)\include;$(OPENCV_DIR)\include;..\CameraConvertor\include;..\CarDetector\include;..\PlateDetector\include;..\PlateExtractor\include;$(TESSERACT_BUILD)\tesseract-ocr\api;$(TESSERACT_BUILD)\tesseract-ocr\ccmain;$(TESSERACT_BUILD)\tesseract-ocr\ccstruct;$(TESSERACT_BUILD)\tesseract-ocr\ccutil;$(TESSERACT_BUILD)\tesseract-ocr\classify;include;test</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(TESSERACT_BUILD)\lib\x64;$(TESSERACT_BUILD)\lib;$(OPENCV_DIR)\x64\vc12\lib;$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_world310d.lib;libtesseract304.lib;giflib416-static-mtdll.lib;libjpeg8c-static-mtdll.lib;liblept171.lib;liblept171-static-mtdll.lib;libpng143-static-mtdll.lib;libtiff394-static-mtdll.lib;zlib128-static-mtdll.lib;CameraConvertor.lib;CarDetector.lib;PlateDetector.lib;PlateExtractor.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(VLC_SDK)\lib;$(TESSERACT_BUILD)\lib\x64;$(TESSERACT_BUILD)\lib;$(OPENCV_DIR)\x64\vc12\lib;$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libvlc.lib;libvlccore.lib;opencv_world310d.lib;libtesseract304.lib;giflib416-static-mtdll.lib;libjpeg8c-static-mtdll.lib;liblept171.lib;liblept171-static-mtdll.lib;libpng143-static-mtdll.lib;libtiff394-static-mtdll.lib;zlib128-static-mtdll.lib;CameraConvertor.lib;CarDetector.lib;PlateDetector.lib;PlateExtractor.lib</AdditionalDependencies>
     </Link>
     <ProjectReference>
       <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
@@ -127,12 +127,17 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(OPENCV_DIR)\include;..\CameraConvertor\include;..\CarDetector\include;..\PlateDetector\include;..\PlateExtractor\include;include;test;$(TESSERACT_BUILD)\tesseract-ocr\api;$(TESSERACT_BUILD)\tesseract-ocr\ccmain;$(TESSERACT_BUILD)\tesseract-ocr\ccstruct;$(TESSERACT_BUILD)\tesseract-ocr\ccutil;$(TESSERACT_BUILD)\tesseract-ocr\classify;$(TESSERACT_BUILD)\tesseract-ocr\contrib;$(TESSERACT_BUILD)\tesseract-ocr\cube;$(VLC_SDK)\include</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(VLC_SDK)\lib;$(TESSERACT_BUILD)\lib\Win32;$(TESSERACT_BUILD)\lib;$(OPENCV_DIR)\x86\vc12\lib;$(SolutionDir)$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CameraConvertor.lib;CarDetector.lib;PlateDetector.lib;PlateExtractor.lib;opencv_world300.lib;ws2_32.lib;user32.lib;zlib128-static-mtdll.lib;libpng143-static-mtdll.lib;libjpeg8c-static-mtdll.lib;giflib416-static-mtdll.lib;libtiff394-static-mtdll.lib;liblept171-static-mtdll.lib;libtesseract304-static.lib;libvlc.lib;libvlccore.lib</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -145,15 +150,15 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(OPENCV_DIR)\include;..\CameraConvertor\include;..\CarDetector\include;..\PlateDetector\include;..\PlateExtractor\include;$(TESSERACT_BUILD)\tesseract-ocr\api;$(TESSERACT_BUILD)\tesseract-ocr\ccmain;$(TESSERACT_BUILD)\tesseract-ocr\ccstruct;$(TESSERACT_BUILD)\tesseract-ocr\ccutil;$(TESSERACT_BUILD)\tesseract-ocr\classify;include;test</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(VLC_SDK)\include;$(OPENCV_DIR)\include;..\CameraConvertor\include;..\CarDetector\include;..\PlateDetector\include;..\PlateExtractor\include;$(TESSERACT_BUILD)\tesseract-ocr\api;$(TESSERACT_BUILD)\tesseract-ocr\ccmain;$(TESSERACT_BUILD)\tesseract-ocr\ccstruct;$(TESSERACT_BUILD)\tesseract-ocr\ccutil;$(TESSERACT_BUILD)\tesseract-ocr\classify;include;test</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(TESSERACT_BUILD)\lib\x64;$(TESSERACT_BUILD)\lib;$(OPENCV_DIR)\x64\vc12\lib;$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_world310d.lib;libtesseract304-static.lib;giflib416-static-mtdll.lib;libjpeg8c-static-mtdll.lib;liblept171.lib;liblept171-static-mtdll.lib;libpng143-static-mtdll.lib;libtiff394-static-mtdll.lib;zlib128-static-mtdll.lib;CameraConvertor.lib;CarDetector.lib;PlateDetector.lib;PlateExtractor.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(VLC_SDK)\lib;$(TESSERACT_BUILD)\lib\x64;$(TESSERACT_BUILD)\lib;$(OPENCV_DIR)\x64\vc12\lib;$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libvlc.lib;libvlccore.lib;opencv_world310d.lib;libtesseract304.lib;giflib416-static-mtdll.lib;libjpeg8c-static-mtdll.lib;liblept171.lib;liblept171-static-mtdll.lib;libpng143-static-mtdll.lib;libtiff394-static-mtdll.lib;zlib128-static-mtdll.lib;CameraConvertor.lib;CarDetector.lib;PlateDetector.lib;PlateExtractor.lib</AdditionalDependencies>
     </Link>
     <ProjectReference>
       <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>

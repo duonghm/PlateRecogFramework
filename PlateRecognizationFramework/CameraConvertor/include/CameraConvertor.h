@@ -8,7 +8,8 @@ namespace pr{
 	enum INPUT_TYPE {
 		IMAGE,
 		VIDEO,
-		CAMERA
+		CAMERA,
+		VLC
 	};
 
 	class CameraConvertor{

@@ -10,7 +10,7 @@
 namespace pr{
 	class CascadeTrainingStrategy: IPlateDetectStrategy{
 	private:
-		std::string cascadeFile;
+		std::string cascadeFile;		
 		cv::CascadeClassifier classfier;
 		cv::Size minSize;
 		cv::Size maxSize;

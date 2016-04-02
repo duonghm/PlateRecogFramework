@@ -1,0 +1,28 @@
+﻿Build started 4/2/2016 7:45:50 PM.
+     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateExtractor\PlateExtractor.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IE:\PlateRecogExtendedLib\opencv\build\include /I..\PlateDetector\include /Iinclude /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\api" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\ccmain" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\ccstruct" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\ccutil" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\classify" /IE:\PlateRecogExtendedLib\tesseract\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt src\DirectExtractStrategy.cpp src\IPlateExtract.cpp src\PlateExtractor.cpp src\PlateExtractStrategy.cpp src\TesseractTextRecognizer.cpp src\ITextRecognizer.cpp
+         DirectExtractStrategy.cpp
+         IPlateExtract.cpp
+         PlateExtractor.cpp
+     1>src\PlateExtractor.cpp(18): warning C4018: '<' : signed/unsigned mismatch
+         PlateExtractStrategy.cpp
+         TesseractTextRecognizer.cpp
+     1>e:\platerecogextendedlib\tesseract\include\leptonica\environ.h(446): warning C4005: 'snprintf' : macro redefinition
+                 E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\ccutil\platform.h(31) : see previous definition of 'snprintf'
+     1>e:\platerecogextendedlib\tesseract\include\leptonica\pix.h(209): warning C4305: 'initializing' : truncation from 'double' to 'const l_float32'
+     1>e:\platerecogextendedlib\tesseract\include\leptonica\pix.h(211): warning C4305: 'initializing' : truncation from 'double' to 'const l_float32'
+         ITextRecognizer.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\Release\PlateExtractor.lib" /NOLOGO /LTCG Release\DirectExtractStrategy.obj
+         Release\IPlateExtract.obj
+         Release\PlateExtractor.obj
+         Release\PlateExtractStrategy.obj
+         Release\TesseractTextRecognizer.obj
+         Release\ITextRecognizer.obj
+         PlateExtractor.vcxproj -> C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\Release\PlateExtractor.lib
+     1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateExtractor\PlateExtractor.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.60

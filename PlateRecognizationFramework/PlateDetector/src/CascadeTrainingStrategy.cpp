@@ -9,7 +9,7 @@ std::vector<PlateRegion> CascadeTrainingStrategy::GetPlateRegions(PlateDetectorI
 {
 	std::vector<cv::Rect> plates;
 	CascadeTrainingInputData* cdata = (CascadeTrainingInputData*)data;
-	this->classfier.detectMultiScale(cdata->img, plates, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, minSize, maxSize);
+	this->classfier.detectMultiScale(cdata->img, plates, 2, 1, 0 | cv::CASCADE_SCALE_IMAGE, minSize, maxSize);	
 	std::vector<PlateRegion> platesRegions;
 	for (int i = 0; i < plates.size(); i++){
 		PlateRegion p;
