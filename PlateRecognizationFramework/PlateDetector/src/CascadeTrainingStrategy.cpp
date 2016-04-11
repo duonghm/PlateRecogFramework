@@ -9,14 +9,16 @@ std::vector<PlateRegion> CascadeTrainingStrategy::GetPlateRegions(PlateDetectorI
 {
 	std::vector<cv::Rect> plates;
 	CascadeTrainingInputData* cdata = (CascadeTrainingInputData*)data;
-	this->classfier.detectMultiScale(cdata->img, plates, 2, 1, 0 | cv::CASCADE_SCALE_IMAGE, minSize, maxSize);	
+	//this->classfier.detectMultiScale(cdata->img, plates, 2, 3, 0 | cv::CASCADE_SCALE_IMAGE, minSize, maxSize);	
+	this->classfier.detectMultiScale(cdata->img, plates, this->scaleFactor, this->minNeighbor, 0 | cv::CASCADE_SCALE_IMAGE, minSize, maxSize);
 	std::vector<PlateRegion> platesRegions;
 	for (int i = 0; i < plates.size(); i++){
 		PlateRegion p;
 		p.region = plates.at(i);
 		p.imgData = cdata->img(p.region).clone();
-		platesRegions.push_back(p);
+		platesRegions.push_back(p);		
 	}
+
 	return platesRegions;
 }
 
@@ -44,5 +46,15 @@ void pr::CascadeTrainingStrategy::SetMinSize(cv::Size minSize)
 void pr::CascadeTrainingStrategy::SetMaxSize(cv::Size maxSize)
 {
 	this->maxSize = maxSize;
+}
+
+void pr::CascadeTrainingStrategy::SetScaleFactor(int _scaleFactor)
+{
+	this->scaleFactor = _scaleFactor;
+}
+
+void pr::CascadeTrainingStrategy::SetMinNeighbor(int _minNeighbor)
+{
+	this->minNeighbor = _minNeighbor;
 }
 

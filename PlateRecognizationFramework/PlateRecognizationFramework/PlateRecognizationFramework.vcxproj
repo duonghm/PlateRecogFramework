@@ -88,7 +88,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(OPENCV_DIR)\include;..\CameraConvertor\include;..\CarDetector\include;..\PlateDetector\include;..\PlateExtractor\include;include;test;$(TESSERACT_BUILD)\tesseract-ocr\api;$(TESSERACT_BUILD)\tesseract-ocr\ccmain;$(TESSERACT_BUILD)\tesseract-ocr\ccstruct;$(TESSERACT_BUILD)\tesseract-ocr\ccutil;$(TESSERACT_BUILD)\tesseract-ocr\classify;$(TESSERACT_BUILD)\tesseract-ocr\contrib;$(TESSERACT_BUILD)\tesseract-ocr\cube;$(VLC_SDK)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OPENCV_DIR)\include;..\CameraConvertor\include;..\CarDetector\include;..\PlateDetector\include;..\PlateExtractor\include;include;test;$(TESSERACT_BUILD)\tesseract-ocr\api;$(TESSERACT_BUILD)\tesseract-ocr\ccmain;$(TESSERACT_BUILD)\tesseract-ocr\ccstruct;$(TESSERACT_BUILD)\tesseract-ocr\ccutil;$(TESSERACT_BUILD)\tesseract-ocr\classify;$(TESSERACT_BUILD)\tesseract-ocr\contrib;$(TESSERACT_BUILD)\tesseract-ocr\cube;$(TESSERACT_BUILD)\include\;$(VLC_SDK)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,7 +127,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(OPENCV_DIR)\include;..\CameraConvertor\include;..\CarDetector\include;..\PlateDetector\include;..\PlateExtractor\include;include;test;$(TESSERACT_BUILD)\tesseract-ocr\api;$(TESSERACT_BUILD)\tesseract-ocr\ccmain;$(TESSERACT_BUILD)\tesseract-ocr\ccstruct;$(TESSERACT_BUILD)\tesseract-ocr\ccutil;$(TESSERACT_BUILD)\tesseract-ocr\classify;$(TESSERACT_BUILD)\tesseract-ocr\contrib;$(TESSERACT_BUILD)\tesseract-ocr\cube;$(VLC_SDK)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OPENCV_DIR)\include;..\CameraConvertor\include;..\CarDetector\include;..\PlateDetector\include;..\PlateExtractor\include;include;test;$(TESSERACT_BUILD)\tesseract-ocr\api;$(TESSERACT_BUILD)\tesseract-ocr\ccmain;$(TESSERACT_BUILD)\tesseract-ocr\ccstruct;$(TESSERACT_BUILD)\tesseract-ocr\ccutil;$(TESSERACT_BUILD)\tesseract-ocr\classify;$(TESSERACT_BUILD)\tesseract-ocr\contrib;$(TESSERACT_BUILD)\tesseract-ocr\cube;$(TESSERACT_BUILD)\include\;$(VLC_SDK)\include</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -168,12 +168,14 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="src\PlateRecognizator.cpp" />
     <ClCompile Include="test\TestCameraConvertorModule.cpp" />
+    <ClCompile Include="test\TestCarDetectorModule.cpp" />
     <ClCompile Include="test\TestPlateDetectorModule.cpp" />
     <ClCompile Include="test\TestPlateExtractorModule.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\PlateRecognizator.h" />
     <ClInclude Include="test\TestCameraConvertorModule.h" />
+    <ClInclude Include="test\TestCarDetectorModule.h" />
     <ClInclude Include="test\TestPlateDetectorModule.h" />
     <ClInclude Include="test\TestPlateExtractorModule.h" />
   </ItemGroup>

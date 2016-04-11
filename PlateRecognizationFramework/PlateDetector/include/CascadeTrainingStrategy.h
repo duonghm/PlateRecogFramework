@@ -14,6 +14,8 @@ namespace pr{
 		cv::CascadeClassifier classfier;
 		cv::Size minSize;
 		cv::Size maxSize;
+		int scaleFactor = 2;
+		int minNeighbor = 3;
 	public:
 		CascadeTrainingStrategy();
 		CascadeTrainingStrategy(std::string);
@@ -21,6 +23,8 @@ namespace pr{
 		std::vector<PlateRegion> GetPlateRegions(PlateDetectorInputData* data) override;
 		void SetMinSize(cv::Size minSize);
 		void SetMaxSize(cv::Size maxSize);
+		void SetScaleFactor(int _scaleFactor);
+		void SetMinNeighbor(int _minNeighbor);
 	};
 }
 

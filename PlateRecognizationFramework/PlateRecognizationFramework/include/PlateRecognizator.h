@@ -18,10 +18,11 @@ namespace pr{
 		PlateDetector* plateDetector;
 		PlateExtractor* plateExtractor;
 				
-	public:
+	public:		
 		void Init(std::string cascadeFileURL);
 		std::vector<std::string> GetResult();
-		std::vector <pr::PlateRegion> GetPlateRegions();
+		std::vector<std::string> GetResult(std::vector<PlateRegion>);
+		std::vector <pr::PlateRegion> GetPlateRegions();		
 		void SetImg(cv::Mat img);
 		void InitInput();
 		void InitPlateDetector();

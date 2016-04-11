@@ -36,6 +36,9 @@
     <ClCompile Include="src\PlateRecognizator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="test\TestCarDetectorModule.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test\TestCameraConvertorModule.h">
@@ -49,6 +52,9 @@
     </ClInclude>
     <ClInclude Include="include\PlateRecognizator.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="test\TestCarDetectorModule.h">
+      <Filter>Header Files\test</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

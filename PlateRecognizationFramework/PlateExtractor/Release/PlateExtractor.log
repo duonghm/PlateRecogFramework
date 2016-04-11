@@ -1,5 +1,5 @@
-﻿Build started 4/2/2016 7:45:50 PM.
-     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateExtractor\PlateExtractor.vcxproj" on node 3 (Build target(s)).
+﻿Build started 4/6/2016 9:36:10 PM.
+     1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateExtractor\PlateExtractor.vcxproj" on node 3 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IE:\PlateRecogExtendedLib\opencv\build\include /I..\PlateDetector\include /Iinclude /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\api" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\ccmain" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\ccstruct" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\ccutil" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\classify" /IE:\PlateRecogExtendedLib\tesseract\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt src\DirectExtractStrategy.cpp src\IPlateExtract.cpp src\PlateExtractor.cpp src\PlateExtractStrategy.cpp src\TesseractTextRecognizer.cpp src\ITextRecognizer.cpp
          DirectExtractStrategy.cpp
@@ -21,8 +21,8 @@
          Release\TesseractTextRecognizer.obj
          Release\ITextRecognizer.obj
          PlateExtractor.vcxproj -> C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\Release\PlateExtractor.lib
-     1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateExtractor\PlateExtractor.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateExtractor\PlateExtractor.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.60
+Time Elapsed 00:00:05.07

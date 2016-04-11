@@ -16,8 +16,8 @@ void Test_PlateDetectorModule()
 }
 
 void Test_PlateDetectorModule_1(){
-	std::string testImgURL = "../data/samples/vn-80.jpg";
-	std::string cascadeFileURL = "../data/plateCascade/vn.xml";
+	std::string testImgURL = "../data/samples/vn-15.jpg";
+	std::string cascadeFileURL = "../data/plateCascade/vn_noborder2.xml";
 	cv::Mat img = cv::imread(testImgURL, 1);
 
 	PlateDetector detector;
@@ -34,6 +34,8 @@ void Test_PlateDetectorModule_1(){
 	std::vector<PlateRegion> plates = detector.GetPlateRegions();
 	for (int i = 0; i < plates.size(); i++){
 		cv::rectangle(img, plates.at(i).region, cv::Scalar(255, 255, 0), 1, 8, 0);
+		std::cout << plates[i].imgData.size() << std::endl;
+		cv::imwrite("../cropData/cropPlate/test.jpg", plates[i].imgData);
 	}
 	
 	imshow("Plate Detect", img);

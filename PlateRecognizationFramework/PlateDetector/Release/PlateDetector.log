@@ -1,9 +1,9 @@
-﻿Build started 4/3/2016 1:28:12 AM.
+﻿Build started 4/8/2016 1:17:25 PM.
      1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateDetector\PlateDetector.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IE:\PlateRecogExtendedLib\opencv\build\include /Iinclude /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt src\CascadeTrainingStrategy.cpp
          CascadeTrainingStrategy.cpp
-     1>src\CascadeTrainingStrategy.cpp(14): warning C4018: '<' : signed/unsigned mismatch
+     1>src\CascadeTrainingStrategy.cpp(15): warning C4018: '<' : signed/unsigned mismatch
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\Release\PlateDetector.lib" /NOLOGO /LTCG Release\CascadeTrainingStrategy.obj
          Release\IPlateDetect.obj
@@ -14,4 +14,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.86
+Time Elapsed 00:00:00.83

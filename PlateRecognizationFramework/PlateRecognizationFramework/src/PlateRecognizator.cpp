@@ -24,6 +24,13 @@ std::vector<std::string> PlateRecognizator::GetResult()
 	return platesText;	
 }
 
+std::vector<std::string> PlateRecognizator::GetResult(std::vector<PlateRegion> plates)
+{
+	// Extract Plate data
+	std::vector<std::string> platesText = plateExtractor->GetTextData(plates);
+	return platesText;
+}
+
 std::vector<pr::PlateRegion> PlateRecognizator::GetPlateRegions()
 {
 	//cv::Mat img = cam->GetImage();
@@ -57,7 +64,9 @@ void pr::PlateRecognizator::InitPlateDetector()
 	plateDetector = new PlateDetector();
 	CascadeTrainingStrategy* casStrategy = new CascadeTrainingStrategy(cascadeFileURL);
 	casStrategy->SetMinSize(cv::Size(30, 30));
-	casStrategy->SetMaxSize(cv::Size(70, 70));
+	casStrategy->SetMaxSize(cv::Size(150, 150));
+	casStrategy->SetScaleFactor(2);
+	casStrategy->SetMinNeighbor(3);
 	IPlateDetectStrategy* strategy = (IPlateDetectStrategy*)casStrategy;
 	plateDetector->SetDetectStrategy(strategy);	
 }
@@ -68,7 +77,7 @@ void pr::PlateRecognizator::InitPlateExtractor()
 
 	DirectExtractStrategy* directStra = new DirectExtractStrategy();
 	TesseractTextRecognizer* tessRecog = new TesseractTextRecognizer();
-	tessRecog->InitData(NULL, "vie");
+	tessRecog->InitData(NULL, "leu");
 
 	PlateExtractStrategy* strategy = (PlateExtractStrategy*)directStra;
 	ITextRecognizer* recognizer = (ITextRecognizer*)tessRecog;
