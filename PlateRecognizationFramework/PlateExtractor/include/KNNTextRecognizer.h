@@ -13,7 +13,7 @@ namespace pr{
 
 		int imgMaxEdgeSize = 25;
 		cv::Size imgWrapSize = cv::Size(28, 28);
-		int neighbor = 1;
+		int neighbor = 10;
 	public:	
 		void ProcessImg(cv::Mat& img);
 		void Init(std::string indexFile, std::string dataFile);
@@ -22,6 +22,7 @@ namespace pr{
 		void SetImgWrapSize(cv::Size size);
 
 		std::string GetText(cv::Mat& img) override;
+		std::string GetTextDebug(cv::Mat& img, cv::Mat& proccessed);
 
 	};
 }

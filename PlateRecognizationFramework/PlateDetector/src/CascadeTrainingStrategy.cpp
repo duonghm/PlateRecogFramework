@@ -35,7 +35,9 @@ pr::CascadeTrainingStrategy::CascadeTrainingStrategy(std::string file)
 void pr::CascadeTrainingStrategy::LoadCascadeFile(std::string file)
 {
 	this->cascadeFile = file;
-	classfier.load(cascadeFile);
+	if (!classfier.load(cascadeFile)){
+		std::cout << "Fail to load cascade classifier" << std::endl;
+	}
 }
 
 void pr::CascadeTrainingStrategy::SetMinSize(cv::Size minSize)

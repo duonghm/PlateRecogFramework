@@ -1,20 +1,6 @@
-﻿Build started 4/18/2016 5:37:26 PM.
+﻿Build started 4/19/2016 2:32:44 AM.
      1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateRecognizationFramework\PlateRecognizationFramework.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IE:\PlateRecogExtendedLib\opencv\build\include /I..\CameraConvertor\include /I..\CarDetector\include /I..\PlateDetector\include /I..\PlateExtractor\include /Iinclude /Itest /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\api" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\ccmain" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\ccstruct" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\ccutil" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\classify" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\contrib" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\cube" /IE:\PlateRecogExtendedLib\tesseract\include\ /I"E:\PlateRecogExtendedLib\vlc\vlc-2.0.0-rc1-win32\sdk\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
-         Main.cpp
-     1>E:\PlateRecogExtendedLib\opencv\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>E:\PlateRecogExtendedLib\opencv\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>E:\PlateRecogExtendedLib\opencv\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>E:\PlateRecogExtendedLib\vlc\vlc-2.0.0-rc1-win32\sdk\include\vlc/libvlc.h : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss
-     1>Main.cpp(196): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>Main.cpp(197): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>Main.cpp(198): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>Main.cpp(199): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>Main.cpp(245): warning C4018: '<' : signed/unsigned mismatch
-     1>Main.cpp(302): warning C4018: '<' : signed/unsigned mismatch
-     1>Main.cpp(397): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-       Link:
+     1>Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\Release\PlateRecognizationFramework.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"E:\PlateRecogExtendedLib\vlc\vlc-2.0.0-rc1-win32\sdk\lib" /LIBPATH:E:\PlateRecogExtendedLib\tesseract\lib\Win32 /LIBPATH:E:\PlateRecogExtendedLib\tesseract\lib /LIBPATH:E:\PlateRecogExtendedLib\opencv\build\x86\vc12\lib /LIBPATH:C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\Release\ CameraConvertor.lib CarDetector.lib PlateDetector.lib PlateExtractor.lib opencv_world300.lib ws2_32.lib user32.lib "zlib128-static-mtdll.lib" "libpng143-static-mtdll.lib" "libjpeg8c-static-mtdll.lib" "giflib416-static-mtdll.lib" "libtiff394-static-mtdll.lib" "liblept171-static-mtdll.lib" "libtesseract304-static.lib" libvlc.lib libvlccore.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\Release\PlateRecognizationFramework.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\Release\PlateRecognizationFramework.lib" /MACHINE:X86 /SAFESEH:NO Release\Main.obj
          Release\PlateRecognizator.obj
          Release\TestCameraConvertorModule.obj
@@ -29,4 +15,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.47
+Time Elapsed 00:00:01.92

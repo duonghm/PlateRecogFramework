@@ -1,4 +1,4 @@
-﻿Build started 4/18/2016 5:37:04 PM.
+﻿Build started 4/19/2016 2:32:42 AM.
      1>Project "C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\PlateExtractor\PlateExtractor.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IE:\PlateRecogExtendedLib\opencv\build\include /I..\PlateDetector\include /Iinclude /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\api" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\ccmain" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\ccstruct" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\ccutil" /I"E:\PlateRecogExtendedLib\tesseract\tesseract-ocr\classify" /IE:\PlateRecogExtendedLib\tesseract\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt src\KNNTextRecognizer.cpp
@@ -9,9 +9,11 @@
      1>src\KNNTextRecognizer.cpp(74): warning C4018: '<' : signed/unsigned mismatch
      1>src\KNNTextRecognizer.cpp(75): warning C4018: '<' : signed/unsigned mismatch
      1>src\KNNTextRecognizer.cpp(96): warning C4018: '<' : signed/unsigned mismatch
-     1>src\KNNTextRecognizer.cpp(123): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>src\KNNTextRecognizer.cpp(127): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>src\KNNTextRecognizer.cpp(181): warning C4018: '<' : signed/unsigned mismatch
+     1>src\KNNTextRecognizer.cpp(117): warning C4018: '<' : signed/unsigned mismatch
+     1>src\KNNTextRecognizer.cpp(144): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>src\KNNTextRecognizer.cpp(148): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>src\KNNTextRecognizer.cpp(206): warning C4018: '<' : signed/unsigned mismatch
+     1>src\KNNTextRecognizer.cpp(220): warning C4018: '<' : signed/unsigned mismatch
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\hmduong\Documents\GitHub\PlateRecogFramework\PlateRecognizationFramework\Release\PlateExtractor.lib" /NOLOGO /LTCG Release\DirectExtractStrategy.obj
          Release\IPlateExtract.obj
@@ -25,4 +27,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.04
+Time Elapsed 00:00:01.01

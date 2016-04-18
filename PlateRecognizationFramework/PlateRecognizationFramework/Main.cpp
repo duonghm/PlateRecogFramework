@@ -2,6 +2,7 @@
 #include <CameraConvertor.h>
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
+#include <fstream> 
 
 //#define TEST_CAMERA_CONVERTOR
 //#define TEST_PLATE_DETECTOR
@@ -181,6 +182,7 @@ cv::Mat createVirtualPlate(cv::Mat& rawPlate){
 #include "KNNTextRecognizer.h"
 
 KNNTextRecognizer knn;
+std::ofstream ofs;
 #endif // KNN_READER
 
 
@@ -227,6 +229,8 @@ void display(void *data, void *id){
 	assert(id == NULL);
 }
 
+int plate_num = 0;
+
 void unlock(void *data, void *id, void *const *p_pixels)
 {
 	struct ctx *ctx = (struct ctx*)data;
@@ -244,8 +248,9 @@ void unlock(void *data, void *id, void *const *p_pixels)
 		plates_rect = recognizator_rect.GetPlateRegions();
 		for (int i = 0; i < plates_rect.size(); i++){
 			cv::rectangle(dis, plates_rect[i].region, cv::Scalar(255, 0, 255), 2, 8, 0);
-			string filename = "../cropData/cropPlate/" + std::to_string(frameNum) + "_" + std::to_string(i) + ".jpg";
-			//cv::imwrite(filename, frame(plates_rect[i].region));
+			//string filename = "../cropData/cropPlate/" + std::to_string(frameNum) + "_" + std::to_string(i) + ".jpg";
+			string filename = "../cropData/cropPlate/" + std::to_string(plate_num++) + ".jpg";
+			cv::imwrite(filename, frame(plates_rect[i].region));
 
 #ifdef CROP_CHARACTER
 			//writeCharRect(frame(plates_rect[i].region));
@@ -260,9 +265,20 @@ void unlock(void *data, void *id, void *const *p_pixels)
 			}
 #endif // CROP_CHARACTER
 
-#ifdef KNN_READER			
-			imshow("current plate", frame(plates_rect[i].region));
-			std::cout << knn.GetText(frame(plates_rect[i].region)) << std::endl;			
+#ifdef KNN_READER
+			cv::Mat plate = frame(plates_rect[i].region);
+			imshow("current plate", plate);
+			//std::string plateValue = knn.GetText(frame(plates_rect[i].region));
+			cv::Mat proccessedBin;
+			std::string plateValue = knn.GetTextDebug(plate, proccessedBin);
+			std::cout << plateValue << std::endl;
+			ofs << filename << "\t" << plateValue << std::endl;
+
+			cv::imwrite("../cropData/binaryPlate/" + std::to_string(frameNum) + "_" + std::to_string(i) + ".jpg", proccessedBin);
+			//cv::imwrite("../cropData/segmentPlate/" + std::to_string(frameNum) + "_" + std::to_string(i) + ".jpg", plate);
+
+			proccessedBin.release();
+			plate.release();
 #endif
 		}
 		
@@ -390,6 +406,7 @@ int main(){
 
 #ifdef KNN_READER
 	knn.Init("../data/knndata/classifications.xml", "../data/knndata/images.xml");
+	ofs.open("../cropData/result.txt", std::ofstream::out | std::ofstream::app);
 #endif // KNN_READER
 
 	string url = "F:\\114817-vv-1.avi";

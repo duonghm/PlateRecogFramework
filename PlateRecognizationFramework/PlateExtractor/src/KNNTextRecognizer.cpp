@@ -97,10 +97,31 @@ std::string pr::KNNTextRecognizer::GetText(cv::Mat& img)
 			//imshow(std::to_string(i), processedImg(rect[i]));
 			result += GetCharacter(processedImg(rect[i]));
 		}
-
 		int stop_s = clock();
-	std::cout << "time: " << (stop_s - start_s) / double(CLOCKS_PER_SEC) * 1000 << std::endl;
+		std::cout << "time: " << (stop_s - start_s) / double(CLOCKS_PER_SEC) * 1000 << std::endl;
 	}
+	imshow("processed Img", processedImg);
+	imshow("original plate", img);
+	return result;
+}
+
+std::string pr::KNNTextRecognizer::GetTextDebug(cv::Mat& img, cv::Mat& proccessed)
+{
+	int start_s = clock();
+
+	std::string result = "";
+	cv::Mat processedImg;
+	if (!img.empty()){
+		std::vector<cv::Rect> rect = findCharacterRect(img, processedImg);
+		sort(rect);
+		for (int i = 0; i < rect.size(); i++){			
+			result += GetCharacter(processedImg(rect[i]));
+			//result += GetCharacter(img(rect[i]));
+		}
+		int stop_s = clock();
+		std::cout << "time: " << (stop_s - start_s) / double(CLOCKS_PER_SEC) * 1000 << std::endl;
+	}
+	proccessed = processedImg;
 	imshow("processed Img", processedImg);
 	imshow("original plate", img);
 	return result;
@@ -153,6 +174,10 @@ bool isValidCharBox(cv::Rect rect){
 	return rect.width > _minCharWidth && rect.height > _minCharHeight && rect.width < _maxCharWidth && rect.height < _maxCharHeight;
 }
 
+static int num = 0;
+
+// Need improve
+// Seprate to new module
 std::vector<cv::Rect> findCharacterRect(cv::Mat& img, cv::Mat& proccessedImg){
 	std::vector<cv::Rect> result;
 
@@ -163,10 +188,10 @@ std::vector<cv::Rect> findCharacterRect(cv::Mat& img, cv::Mat& proccessedImg){
 	cv::equalizeHist(customeImgProcess, customeImgProcess);
 	std::vector<std::vector<cv::Point> > contours;
 	std::vector<cv::Vec4i> hierarchy;
-	cv::adaptiveThreshold(customeImgProcess, customeImgProcess, 255, cv::ADAPTIVE_THRESH_GAUSSIAN_C, cv::THRESH_BINARY, 37 * _scaleFactor, 1);	
+	cv::adaptiveThreshold(customeImgProcess, customeImgProcess, 255, cv::ADAPTIVE_THRESH_GAUSSIAN_C, cv::THRESH_BINARY, 51 * _scaleFactor, 1);	
 	proccessedImg = customeImgProcess.clone();
 
-	int erosion_size = 1;
+	int erosion_size = 0;
 	cv::Mat element = cv::getStructuringElement(
 		cv::MORPH_RECT,
 		cv::Size(2 * erosion_size + 1, 2 * erosion_size + 1),
@@ -183,12 +208,19 @@ std::vector<cv::Rect> findCharacterRect(cv::Mat& img, cv::Mat& proccessedImg){
 		cv::approxPolyDP(cv::Mat(contours[i]), contours_polys[i], 1, true);
 		boundRects[i] = cv::boundingRect(cv::Mat(contours_polys[i]));
 		if (isValidCharBox(boundRects[i])){
-			cv::Scalar color = cv::Scalar(255, 0, 255);
-			rectangle(img, boundRects[i].tl(), boundRects[i].br(), color, 2, 8, 0);
+			cv::imwrite("../cropData/cropCharacter/char_" + std::to_string(num) + "_" + std::to_string(i) + ".jpg", img(boundRects[i]));			
 			result.push_back(boundRects[i]);
-			//drawContours(img, contours_polys, i, color, 1, 8, std::vector<cv::Vec4i>(), 0, cv::Point());
-			//cv::imwrite("../cropData/cropCharacter/char_" + std::to_string(frameNum) + "_" + std::to_string(i) + ".jpg", img(boundRects[i]));
+			//drawContours(img, contours_polys, i, color, 1, 8, std::vector<cv::Vec4i>(), 0, cv::Point());			
 		}
+	}
+	num++;
+
+	// Redraw box for debug
+	cv::cvtColor(proccessedImg, proccessedImg, cv::COLOR_GRAY2RGB);
+	for (int i = 0; i < result.size(); i++)
+	{		
+		cv::Scalar color = cv::Scalar(255, 0, 255);
+		rectangle(proccessedImg, result[i].tl(), result[i].br(), color, 2, 8, 0);
 	}
 
 	customeImgProcess.release();
