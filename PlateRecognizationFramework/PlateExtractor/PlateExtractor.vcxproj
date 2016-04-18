@@ -162,6 +162,7 @@
   <ItemGroup>
     <ClInclude Include="include\DirectExtractStrategy.h" />
     <ClInclude Include="include\IPlateExtract.h" />
+    <ClInclude Include="include\KNNTextRecognizer.h" />
     <ClInclude Include="include\PlateExtractor.h" />
     <ClInclude Include="include\PlateExtractStrategy.h" />
     <ClInclude Include="include\PlateFormat.h" />
@@ -171,6 +172,7 @@
   <ItemGroup>
     <ClCompile Include="src\DirectExtractStrategy.cpp" />
     <ClCompile Include="src\IPlateExtract.cpp" />
+    <ClCompile Include="src\KNNTextRecognizer.cpp" />
     <ClCompile Include="src\PlateExtractor.cpp" />
     <ClCompile Include="src\PlateExtractStrategy.cpp" />
     <ClCompile Include="src\TesseractTextRecognizer.cpp" />

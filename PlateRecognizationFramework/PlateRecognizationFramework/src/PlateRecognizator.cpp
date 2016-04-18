@@ -4,6 +4,7 @@
 #include "TesseractTextRecognizer.h"
 #include "opencv2/opencv.hpp"
 #include "CascadeTrainingInputData.h"
+#include "KNNTextRecognizer.h"
 
 using namespace pr;
 
@@ -42,7 +43,8 @@ std::vector<pr::PlateRegion> PlateRecognizator::GetPlateRegions()
 	PlateDetectorInputData* plateDetectorData = (PlateDetectorInputData*)casData;
 	plateDetector->SetInputData(plateDetectorData);
 	std::vector<PlateRegion> plates = plateDetector->GetPlateRegions();
-
+	casData->img.release();
+	img.release();
 	return plates;
 }
 
@@ -76,17 +78,27 @@ void pr::PlateRecognizator::InitPlateExtractor()
 	plateExtractor = new PlateExtractor();
 
 	DirectExtractStrategy* directStra = new DirectExtractStrategy();
-	TesseractTextRecognizer* tessRecog = new TesseractTextRecognizer();
-	tessRecog->InitData(NULL, "leu");
+	//TesseractTextRecognizer* tessRecog = new TesseractTextRecognizer();
+	//tessRecog->InitData(NULL, "leu");
+	KNNTextRecognizer* knnRecog = new KNNTextRecognizer();
+	knnRecog->Init("../data/knndata/classifications.xml", "../data/knndata/images.xml");
 
 	PlateExtractStrategy* strategy = (PlateExtractStrategy*)directStra;
-	ITextRecognizer* recognizer = (ITextRecognizer*)tessRecog;
+	//ITextRecognizer* recognizer = (ITextRecognizer*)tessRecog;
+	ITextRecognizer* recognizer = (ITextRecognizer*)knnRecog;
 
 	plateExtractor->SetStrategy(strategy);
 	plateExtractor->SetRecognizer(recognizer);
 }
 
-void pr::PlateRecognizator::SetImg(cv::Mat img)
+void pr::PlateRecognizator::SetImg(cv::Mat& img)
 {
-	this->img = img;
+	this->img = img.clone();
+}
+
+std::string pr::PlateRecognizator::GetResult(cv::Mat& img)
+{
+	PlateRegion plate;
+	plate.imgData = img.clone();
+	return plateExtractor->GetTextData(plate);
 }

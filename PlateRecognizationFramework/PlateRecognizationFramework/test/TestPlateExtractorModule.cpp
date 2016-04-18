@@ -2,6 +2,7 @@
 #include "TestPlateExtractorModule.h"
 #include "PlateExtractor.h"
 #include "TesseractTextRecognizer.h"
+#include "KNNTextRecognizer.h"
 #include "DirectExtractStrategy.h"
 #include "PlateRegion.h"
 #include <iostream>
@@ -32,10 +33,11 @@ bool isValidCharacterBox(cv::Rect rect){
 void Test_PlateExtractorModule_1();
 void Test_PlateExtractorModule_2();
 void Test_PlateExtractorModule_3();
+void Test_PlateExtractorModule_4();
 
 void Test_PlateExtractorModule()
 {
-	Test_PlateExtractorModule_3();	
+	Test_PlateExtractorModule_4();
 }
 
 void showContourRect(cv::Mat img){
@@ -85,14 +87,14 @@ void showContourRect(cv::Mat img){
 
 void Test_PlateExtractorModule_1(){
 
-	std::string imgURL = "../data/plateSamples/plate1_noise.jpg";
+	std::string imgURL = "../cropData/virtualPlate/virtual_5_0.jpg";
 	PlateRegion plate;
 	plate.imgData = cv::imread(imgURL, 0);
 
 	PlateExtractor extractor;
 	DirectExtractStrategy* directStra = new DirectExtractStrategy();
 	TesseractTextRecognizer* tessRecog = new TesseractTextRecognizer();
-	//tessRecog->InitData("../data/tessdata/", "lus");
+	tessRecog->InitData("../data/tessdata/", "lus");
 	tessRecog->InitData(NULL, "leu");
 
 	PlateExtractStrategy* strategy = (PlateExtractStrategy*)directStra;
@@ -285,3 +287,26 @@ void Test_PlateExtractorModule_3(){
 	imshow("Processed", processImg);
 }
 
+void Test_PlateExtractorModule_4(){	
+	
+
+	std::string imgURL = "../cropData/cropPlate/873_0.jpg";
+	PlateRegion plate;
+	plate.imgData = cv::imread(imgURL, 1);
+	
+	PlateExtractor extractor;
+	DirectExtractStrategy* directStra = new DirectExtractStrategy();
+	KNNTextRecognizer* knnRecog = new KNNTextRecognizer();
+	knnRecog->Init("../data/knndata/classifications.xml", "../data/knndata/images.xml");
+	
+	PlateExtractStrategy* strategy = (PlateExtractStrategy*)directStra;
+	ITextRecognizer* recognizer = (ITextRecognizer*)knnRecog;
+
+	extractor.SetStrategy(strategy);
+	extractor.SetRecognizer(recognizer);
+
+	std::string text = extractor.GetTextData(plate);
+	std::cout << text << std::endl;
+
+	imshow("Plate Extractor", plate.imgData);
+}

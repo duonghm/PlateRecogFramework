@@ -7,7 +7,7 @@
 namespace pr{
 	class ITextRecognizer{
 	public:
-		virtual std::string GetText(cv::Mat img);
+		virtual std::string GetText(cv::Mat& img);
 	};
 }
 

@@ -6,7 +6,7 @@
 
 using namespace pr;
 
-std::string TesseractTextRecognizer::GetText(cv::Mat img)
+std::string TesseractTextRecognizer::GetText(cv::Mat& img)
 {	
 	if (api == NULL){
 		this->InitData(this->dataPath, this->language);

@@ -4,7 +4,7 @@
 
 using namespace pr;
 
-std::string ITextRecognizer::GetText(cv::Mat img)
+std::string ITextRecognizer::GetText(cv::Mat& img)
 {
 	return "";
 }

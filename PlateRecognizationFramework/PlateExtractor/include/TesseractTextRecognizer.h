@@ -12,7 +12,7 @@ namespace pr{
 		char* language;
 		tesseract::TessBaseAPI* api;
 	public:
-		std::string GetText(cv::Mat img) override;
+		std::string GetText(cv::Mat& img) override;
 		void InitData(char*, char*);
 	};
 }

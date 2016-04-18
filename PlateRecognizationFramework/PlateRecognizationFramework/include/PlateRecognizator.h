@@ -22,8 +22,9 @@ namespace pr{
 		void Init(std::string cascadeFileURL);
 		std::vector<std::string> GetResult();
 		std::vector<std::string> GetResult(std::vector<PlateRegion>);
-		std::vector <pr::PlateRegion> GetPlateRegions();		
-		void SetImg(cv::Mat img);
+		std::vector <pr::PlateRegion> GetPlateRegions();
+		std::string GetResult(cv::Mat& img);
+		void SetImg(cv::Mat& img);
 		void InitInput();
 		void InitPlateDetector();
 		void InitPlateExtractor();

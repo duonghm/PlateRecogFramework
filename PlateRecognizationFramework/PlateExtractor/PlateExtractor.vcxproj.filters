@@ -39,6 +39,9 @@
     <ClInclude Include="include\DirectExtractStrategy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\KNNTextRecognizer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\IPlateExtract.cpp">
@@ -57,6 +60,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\DirectExtractStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\KNNTextRecognizer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
