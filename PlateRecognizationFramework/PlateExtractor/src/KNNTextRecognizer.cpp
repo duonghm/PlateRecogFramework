@@ -170,7 +170,7 @@ int _minCharHeight = 10 * _scaleFactor;
 int _maxCharWidth = 40 * _scaleFactor;
 int _maxCharHeight = 40 * _scaleFactor;
 
-bool isValidCharBox(cv::Rect rect){
+bool isValidCharBox(cv::Rect& rect){
 	return rect.width > _minCharWidth && rect.height > _minCharHeight && rect.width < _maxCharWidth && rect.height < _maxCharHeight;
 }
 

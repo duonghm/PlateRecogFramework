@@ -19,14 +19,14 @@ namespace pr{
 		PlateExtractor* plateExtractor;
 				
 	public:		
-		void Init(std::string cascadeFileURL);
+		void Init(std::string cascadeFileURL, cv::Size minSize, cv::Size maxSize, double scale, int neighbor);
 		std::vector<std::string> GetResult();
 		std::vector<std::string> GetResult(std::vector<PlateRegion>);
 		std::vector <pr::PlateRegion> GetPlateRegions();
 		std::string GetResult(cv::Mat& img);
 		void SetImg(cv::Mat& img);
 		void InitInput();
-		void InitPlateDetector();
+		void InitPlateDetector(cv::Size minSize, cv::Size maxSize, double scale, int neighbor);
 		void InitPlateExtractor();
 	};
 }

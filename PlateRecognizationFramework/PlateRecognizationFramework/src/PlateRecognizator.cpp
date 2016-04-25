@@ -48,11 +48,12 @@ std::vector<pr::PlateRegion> PlateRecognizator::GetPlateRegions()
 	return plates;
 }
 
-void pr::PlateRecognizator::Init(std::string cascadeFileURL)
+void pr::PlateRecognizator::Init(std::string cascadeFileURL, cv::Size minSize, cv::Size maxSize, double scale, int neighbor)
 {	
 	this->cascadeFileURL = cascadeFileURL;
 	InitInput();
-	InitPlateDetector();
+	
+	InitPlateDetector(minSize, maxSize, scale, neighbor);
 	InitPlateExtractor();
 }
 
@@ -61,14 +62,17 @@ void pr::PlateRecognizator::InitInput()
 	
 }
 
-void pr::PlateRecognizator::InitPlateDetector()
+void pr::PlateRecognizator::InitPlateDetector(cv::Size minSize, cv::Size maxSize, double scale, int neighbor)
 {
+	std::cout << "Call init plate detector" << std::endl;
 	plateDetector = new PlateDetector();
 	CascadeTrainingStrategy* casStrategy = new CascadeTrainingStrategy(cascadeFileURL);
-	casStrategy->SetMinSize(cv::Size(30, 30));
-	casStrategy->SetMaxSize(cv::Size(150, 150));
-	casStrategy->SetScaleFactor(2);
-	casStrategy->SetMinNeighbor(3);
+	std::cout << minSize << std::endl;
+	std::cout << maxSize << std::endl;	
+	casStrategy->SetMinSize(minSize);
+	casStrategy->SetMaxSize(maxSize);
+	casStrategy->SetScaleFactor(scale);
+	casStrategy->SetMinNeighbor(neighbor);
 	IPlateDetectStrategy* strategy = (IPlateDetectStrategy*)casStrategy;
 	plateDetector->SetDetectStrategy(strategy);	
 }

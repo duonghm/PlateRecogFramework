@@ -6,6 +6,7 @@
 #include "DirectExtractStrategy.h"
 #include "PlateRegion.h"
 #include <iostream>
+#include<ctime>
 
 #include "leptonica/allheaders.h"
 
@@ -34,10 +35,12 @@ void Test_PlateExtractorModule_1();
 void Test_PlateExtractorModule_2();
 void Test_PlateExtractorModule_3();
 void Test_PlateExtractorModule_4();
+void Test_PlateExtractorModule_5();
 
 void Test_PlateExtractorModule()
 {
 	Test_PlateExtractorModule_4();
+	//Test_PlateExtractorModule_5();
 }
 
 void showContourRect(cv::Mat img){
@@ -287,10 +290,10 @@ void Test_PlateExtractorModule_3(){
 	imshow("Processed", processImg);
 }
 
-void Test_PlateExtractorModule_4(){	
-	
+void Test_PlateExtractorModule_4(){		
 
-	std::string imgURL = "../cropData/cropPlate/873_0.jpg";
+	//std::string imgURL = "../cropData/cropPlate/873_0.jpg";
+	std::string imgURL = "../testData/cropPlate/13310_0.jpg";
 	PlateRegion plate;
 	plate.imgData = cv::imread(imgURL, 1);
 	
@@ -309,4 +312,106 @@ void Test_PlateExtractorModule_4(){
 	std::cout << text << std::endl;
 
 	imshow("Plate Extractor", plate.imgData);
+}
+
+//#define USE_FIND_CONTOURS
+#define USE_HOUGH_LINE
+void Test_PlateExtractorModule_5(){
+	int start_s = clock();
+	// Border detection: blur border and sharp border
+	//std::string imgURL = "../testData/cropPlate/1135_0.jpg"; // Background have nearly same color with plate
+	//std::string imgURL = "../testData/cropPlate/1553_0.jpg"; // Very blur image
+	//std::string imgURL = "../testData/cropPlate/11817_0.jpg"; // detect plate border by only right and bot edges
+	std::string imgURL = "../testData/cropPlate/13310_0.jpg"; // detect plate border by only left and bot edges
+	// plate side where plate rotate is easier to detect edge ???
+	//std::string imgURL = "../testData/cropPlate/16296_0.jpg";
+
+	cv::Mat img = cv::imread(imgURL, 1);		
+	
+	cv::resize(img, img, img.size() * 3);
+
+	cv::Mat processImg;
+	cv::cvtColor(img, processImg, cv::COLOR_RGB2GRAY);
+	//cv::blur(processImg, processImg, cv::Size(7, 7));	
+	
+	cv::Mat gradX;
+	cv::Mat gradY;
+	cv::Mat grad;
+
+	//cv::adaptiveThreshold(processImg, processImg, 255, cv::ADAPTIVE_THRESH_GAUSSIAN_C, cv::THRESH_BINARY, 15, 1);
+
+	cv::Sobel(processImg, gradX, CV_16S, 0, 1, 3, 1, 0);
+	cv::Sobel(processImg, gradY, CV_16S, 1, 0, 3, 1, 0);
+
+	convertScaleAbs(gradX, gradX);
+	convertScaleAbs(gradY, gradY);
+	cv::addWeighted(gradX, 0.5, gradY, 0.5, 0, grad);
+	cv::imshow("gradX", gradX);
+	cv::imshow("gradY", gradY);
+	cv::imshow("grad_before", grad);
+
+	cv::threshold(grad, grad, 0, 255, cv::THRESH_OTSU);	
+	
+	//cv::erode(grad, grad, cv::getStructuringElement(cv::MORPH_RECT, cv::Size(5, 5)));
+
+#ifdef USE_FIND_CONTOURS
+	std::vector<std::vector<cv::Point> > contours;
+	std::vector<cv::Vec4i> hierarchy;
+	cv::adaptiveThreshold(processImg, processImg, 255, cv::ADAPTIVE_THRESH_GAUSSIAN_C, cv::THRESH_BINARY, 51, 1);
+	cv::findContours(processImg, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0));
+	std::vector<std::vector<cv::Point> >contours_polys = std::vector<std::vector<cv::Point> >(contours.size());
+	for (int i = 0; i < contours.size(); i++)
+	{
+		cv::approxPolyDP(cv::Mat(contours[i]), contours_polys[i], 1, true);
+		cv::Rect r = cv::boundingRect(cv::Mat(contours_polys[i]));
+		if (r.width > 60 && r.height > 40){
+			cv::Scalar color = cv::Scalar(255, 0, 255);
+			rectangle(img, r.tl(), r.br(), color, 1, 8, 0);
+		}
+	}
+#endif // USE_FIND_CONTOURS
+
+	
+	
+
+	cv::imshow("grad_after", grad);
+
+#ifdef USE_HOUGH_LINE
+	std::vector<cv::Vec4i> lines;
+	HoughLinesP(grad, lines, 1, CV_PI / 180, 100, 100, 2);	
+
+	std::cout << lines.size() << std::endl;
+	for (size_t i = 0; i < lines.size(); i++)
+	{
+		cv::circle(img, cv::Point(lines[i][0], lines[i][1]), 3, cv::Scalar(255, 255, 0));
+		cv::circle(img, cv::Point(lines[i][2], lines[i][3]), 3, cv::Scalar(255, 0, 255));
+		cv::line(img, cv::Point(lines[i][0], lines[i][1]),
+			cv::Point(lines[i][2], lines[i][3]), cv::Scalar(0, 0, 255), 1);
+	}
+#endif // USE_HOUGH_LINE
+		
+
+	//cv::cornerHarris(processImg, processImg, 1, 3, 10, cv::BORDER_DEFAULT);	
+	//normalize(processImg, processImg, 0, 255, cv::NORM_MINMAX, CV_32FC1, cv::Mat());
+	//convertScaleAbs(processImg, processImg);
+
+	/*cv::Mat canny;
+	cv::Canny(processImg, canny, 10, 30);
+
+	cv::adaptiveThreshold(processImg, processImg, 255, cv::ADAPTIVE_THRESH_GAUSSIAN_C, cv::THRESH_BINARY, 101, 1);
+
+	cv::equalizeHist(processImg, processImg);*/
+
+	//cv::cvtColor(processImg, processImg, cv::COLOR_GRAY2RGB);
+	int stop_s = clock();
+	std::cout << "time hough: " << (stop_s - start_s) / double(CLOCKS_PER_SEC) * 1000 << std::endl;
+
+	imshow("original Img", img);
+	imshow("process Img", processImg);
+	//imshow("canny", canny);
+
+	//KNNTextRecognizer knn;
+	//knn.Init("../data/knndata/classifications.xml", "../data/knndata/images.xml");
+	
+
 }

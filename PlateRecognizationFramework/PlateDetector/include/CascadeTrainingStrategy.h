@@ -14,16 +14,16 @@ namespace pr{
 		cv::CascadeClassifier classfier;
 		cv::Size minSize;
 		cv::Size maxSize;
-		int scaleFactor = 2;
+		double scaleFactor = 2;
 		int minNeighbor = 3;
 	public:
 		CascadeTrainingStrategy();
 		CascadeTrainingStrategy(std::string);
 		void LoadCascadeFile(std::string);
 		std::vector<PlateRegion> GetPlateRegions(PlateDetectorInputData* data) override;
-		void SetMinSize(cv::Size minSize);
-		void SetMaxSize(cv::Size maxSize);
-		void SetScaleFactor(int _scaleFactor);
+		void SetMinSize(cv::Size& _minSize);
+		void SetMaxSize(cv::Size& _maxSize);
+		void SetScaleFactor(double _scaleFactor);
 		void SetMinNeighbor(int _minNeighbor);
 	};
 }
